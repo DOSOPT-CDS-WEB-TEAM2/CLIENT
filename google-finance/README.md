@@ -4,6 +4,7 @@
 - fix: 버그 수정
 - docs: 문서 추가, 수정, 삭제
 - style: 코드 포맷팅(코드 순서 변경, 세미콜론 추가)
+- design: CSS 등 사용자 UI 디자인 변경
 - refactor: 코드 리팩토링
 - chore: 그 외 자잘한 수정
 > ex) feat/#{이슈번호}: 헤더 기능 완성<br/>
