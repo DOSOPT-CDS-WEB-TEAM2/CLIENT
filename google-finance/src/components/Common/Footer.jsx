@@ -29,24 +29,29 @@ const FooterContainer = styled.nav`
   position: absolute;
 
   width: 99%;
-  height: 115px;
-  padding: 0 15px;
+  height: 11.5rem;
+  padding: 0 1.5rem;
   bottom: 0;
+
+  font-family: ${(props) => props.theme.fonts.roboto_12};
+  color: ${(props) => props.theme.colors.gray_1};
 `;
 
 const FooterText = styled.span`
-  color: gray;
+  font-family: ${(props) => props.theme.fonts.productsans_10};
+  color: ${(props) => props.theme.colors.gray_2};
 `;
 
-const FooterSub = styled.div`
+const FooterSub = styled.span`
   display: flex;
 `;
+
 const FooterHeader = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
 
   width: 100%;
-  margin-bottom: 18px;
+  margin-bottom: 1.8rem;
 `;
 export default Footer;

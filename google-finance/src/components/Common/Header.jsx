@@ -21,30 +21,37 @@ const NavbarContainer = styled.nav`
   display: flex;
   align-items: flex-end;
 
-  margin: 0 15px 0 15px;
-  padding-bottom: 16px;
+  margin: 0 1.5rem;
+  padding-bottom: 1.6rem;
 
-  height: 90px;
+  height: 9rem;
 
   img:nth-of-type(1) {
-    margin-right: 2px;
+    margin-right: 0.2rem;
+    margin-bottom: 0.3rem;
   }
   img:nth-of-type(2) {
-    margin-right: 42px;
+    margin-right: 4.2rem;
   }
   img:nth-of-type(3) {
-    margin-right: 8px;
+    margin-right: 0.8rem;
+    margin-bottom: 0.3rem;
   }
   img:nth-of-type(4) {
-    margin-right: 13px;
+    margin-right: 1.3rem;
+    margin-bottom: 0.3rem;
   }
 `;
 
 const NavBarButton = styled.button`
-  width: 60px;
-  height: 30px;
-  border-radius: 5px;
-  background: #3478f5;
+  width: 6rem;
+  height: 3rem;
+  border-radius: 0.5rem;
+
+  font-family: ${(props) => props.theme.fonts.roboto_12};
+  background: ${(props) => props.theme.colors.blue_main};
+  border: none;
+
   a {
     text-decoration: none;
     color: white;
