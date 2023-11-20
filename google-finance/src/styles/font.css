@@ -1,0 +1,8 @@
+@font-face {
+  font-family: 'Product Sans';
+  src: url('./fonts/Product\ Sans\ Regular.ttf') format('ttf');
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url('./fonts/Roboto-Regular.ttf') format('ttf');
+}
