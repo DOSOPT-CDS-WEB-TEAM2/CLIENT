@@ -2,20 +2,19 @@ import { css } from 'styled-components';
 
 const colors = {
   white: '#FFFFFF',
-  lightWhite: '#FEFEFE',
   black: '#000000',
-  skyBlue: '#C7F5FE',
-  lightPink: '#FCC8F8',
-  lightPurple: '#EAB4F8',
-  purple: '#9900F0',
-  lightYellow: '#F3F798',
-  hotPink: '#df4b8e',
-  lightRed: '#ffe0e0',
-  gray: '#323232',
-  lightGray: '#929292',
-  red: '#ff0000',
-  green: '#008000',
-  yellow: '#ffff00',
+
+  red_main: '#D12126',
+  red_background: '#FFDEDF',
+
+  blue_main: '#3478F5',
+  blue_background: '#D8E5FE',
+
+  // 숫자가 커질수록 연한 색
+  gray_1: '#363636',
+  gray_2: '#818181',
+  gray_3: '#D5D5D5',
+  gray_4: '#EFEFEF',
 };
 
 const theme = {
