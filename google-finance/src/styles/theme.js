@@ -99,6 +99,15 @@ const fonts = {
     line-height: normal;
     letter-spacing: -0.06rem;
   `,
+  roboto_12_cond: css`
+    font-family: 'Roboto';
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.06rem;
+  `,
+
   roboto_14: css`
     font-family: 'Roboto';
     font-size: 1.4rem;
