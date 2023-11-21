@@ -11,7 +11,7 @@ const Header = () => {
       <img src={SearchIcon} alt="구글금융-검색" className="search-icon" />
       <img src={SubMenuIcon} alt="구글금융-세부메뉴" className="submenu-icon" />
       <St.NavBarButton type="button">
-        <Link to="/MainDetail">로그인</Link>
+        <Link to="/detail">로그인</Link>
       </St.NavBarButton>
     </St.NavbarContainer>
   );
