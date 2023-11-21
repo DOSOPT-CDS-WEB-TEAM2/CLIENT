@@ -1,17 +1,18 @@
 import React from 'react';
 import styled from 'styled-components';
 import logoImage from '../../assets/img/image_logo.svg';
+import { Link } from 'react-router-dom';
 import { MenuIcon, SearchIcon, SubMenuIcon } from '../../assets/index';
 
 const Header = () => {
   return (
     <NavbarContainer>
-      <img src={MenuIcon} alt="구글금융 메뉴" />
-      <img src={logoImage} alt="구글금융 로고" />
-      <img src={SearchIcon} alt="구글금융 검색" />
-      <img src={SubMenuIcon} alt="구글금융 세부메뉴" />
+      <img src={MenuIcon} alt="구글금융-메뉴" className="menu-icon" />
+      <img src={logoImage} alt="구글금융-로고" className="logo-image" />
+      <img src={SearchIcon} alt="구글금융-검색" className="search-icon" />
+      <img src={SubMenuIcon} alt="구글금융-세부메뉴" className="submenu-icon" />
       <NavBarButton type="button">
-        <a href="/MainDetail">로그인</a>
+        <Link to="/MainDetail">로그인</Link>
       </NavBarButton>
     </NavbarContainer>
   );
@@ -21,23 +22,22 @@ const NavbarContainer = styled.nav`
   display: flex;
   align-items: flex-end;
 
-  margin: 0 1.5rem;
-  padding-bottom: 1.6rem;
-
   height: 9rem;
+  padding-bottom: 1.6rem;
+  margin: 0 1.5rem;
 
-  img:nth-of-type(1) {
+  .menu-icon {
     margin-right: 0.2rem;
     margin-bottom: 0.3rem;
   }
-  img:nth-of-type(2) {
+  .logo-image {
     margin-right: 4.2rem;
   }
-  img:nth-of-type(3) {
+  .search-icon {
     margin-right: 0.8rem;
     margin-bottom: 0.3rem;
   }
-  img:nth-of-type(4) {
+  .submenu-icon {
     margin-right: 1.3rem;
     margin-bottom: 0.3rem;
   }
@@ -46,11 +46,11 @@ const NavbarContainer = styled.nav`
 const NavBarButton = styled.button`
   width: 6rem;
   height: 3rem;
-  border-radius: 0.5rem;
 
-  font-family: ${(props) => props.theme.fonts.roboto_12};
-  background: ${(props) => props.theme.colors.blue_main};
   border: none;
+  border-radius: 0.5rem;
+  background: ${(props) => props.theme.colors.blue_main};
+  font-family: ${(props) => props.theme.fonts.roboto_12};
 
   a {
     text-decoration: none;
