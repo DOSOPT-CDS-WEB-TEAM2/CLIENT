@@ -11,6 +11,12 @@ const St = {
     background-color: ${theme.colors.gray_4};
     color: ${theme.colors.gray_2};
     border: none;
+
+    &:active,
+    &:focus {
+      background-color: ${theme.colors.blue_background};
+      color: ${theme.colors.blue_main};
+    }
   `,
 };
 
