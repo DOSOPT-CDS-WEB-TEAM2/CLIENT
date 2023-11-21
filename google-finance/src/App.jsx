@@ -9,7 +9,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
-      <St.CommonButton>아시아</St.CommonButton>
+      <St.CommonButton>미국</St.CommonButton>
     </ThemeProvider>
   );
 }
