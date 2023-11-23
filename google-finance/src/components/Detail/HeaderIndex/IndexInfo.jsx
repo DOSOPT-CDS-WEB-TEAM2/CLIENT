@@ -8,7 +8,7 @@ const IndexInfo = () => {
     <St.Info>
       <span>홈</span>
       <img src={BtnRight} />
-      <span>051910 · KRX</span>
+      <span>051910 ·KRX</span>
     </St.Info>
   );
 };
