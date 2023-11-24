@@ -1,14 +1,22 @@
 import React from 'react';
 import styled from 'styled-components';
+import MyPorfolio from '../components/Main/MyPorfolio';
 
 const Main = () => {
-  return <HomeWrapper>구글 금융 페이지입니다.</HomeWrapper>;
+  return (
+    <St.MainContainer>
+      <MyPorfolio />
+    </St.MainContainer>
+  );
 };
 
-const HomeWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-`;
-
 export default Main;
+
+const St = {
+  MainContainer: styled.div`
+    display: flex;
+    flex-direction: column;
+    /* max-width: 90%; */
+    margin: 0 auto;
+  `,
+};
