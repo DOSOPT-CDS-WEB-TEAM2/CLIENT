@@ -28,7 +28,10 @@ const MyPorfolio = () => {
         <St.AddButton>추가</St.AddButton>
       </St.MyPortfolioHeader>
       {PORTFOLIO_DUMMY.map((each, idx) => (
-        <EachPortfolio key={idx} portfolio={each} />
+        <>
+          <EachPortfolio key={idx} portfolio={each} />
+          {idx !== PORTFOLIO_DUMMY.length - 1 && <St.Line />}
+        </>
       ))}
     </St.MyPortfolioContainer>
   );
@@ -59,5 +62,11 @@ const St = {
     align-items: end;
     color: ${({ theme }) => theme.colors.blue_main};
     ${({ theme }) => theme.fonts.rototo_12_bold};
+  `,
+  Line: styled.hr`
+    margin: 0.7rem 0;
+    border: 0;
+    height: 0.05rem;
+    background-color: ${({ theme }) => theme.colors.gray_3};
   `,
 };
