@@ -1,11 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 import GraphButton from './GraphButton';
+import GraphData from './GraphData';
 
 const Graph = () => {
   return (
     <>
       <GraphButton />
+      <GraphData />
     </>
   );
 };
