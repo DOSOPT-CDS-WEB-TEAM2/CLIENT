@@ -8,7 +8,7 @@ const IndexButton = () => {
   return (
     <St.Info>
       <CommonButtonContainer>
-        <CommonButton>
+        <CommonButton $hasOneIcon={true}>
           <img src={Share} />
         </CommonButton>
         <CommonButton>

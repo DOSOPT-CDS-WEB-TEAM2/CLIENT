@@ -10,12 +10,14 @@ export const CommonButtonContainer = styled.div`
 export const CommonButton = styled.button`
   display: flex;
   align-items: center;
+  justify-content: center;
 
+  width: ${({ $hasOneIcon }) => ($hasOneIcon ? '3rem' : 'auto')};
   height: 3rem;
-  padding: 0.8rem 1.4rem;
+  padding: ${({ $hasOneIcon }) => ($hasOneIcon ? '0' : '0.8rem 1.4rem')};
 
   gap: 0.4rem;
-  border-radius: 1.5rem;
+  border-radius: ${({ $hasOneIcon }) => ($hasOneIcon ? '50%' : '1.5rem')};
   ${theme.fonts.roboto_12_cond};
   background-color: ${theme.colors.gray_4};
   color: ${theme.colors.gray_2};
@@ -27,3 +29,7 @@ export const CommonButton = styled.button`
     color: ${theme.colors.blue_main};
   }
 `;
+
+CommonButton.defaultProps = {
+  $hasOneIcon: false,
+};
