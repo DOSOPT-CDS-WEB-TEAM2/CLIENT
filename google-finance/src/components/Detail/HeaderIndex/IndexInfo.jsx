@@ -8,7 +8,7 @@ const IndexInfo = () => {
     <St.Info>
       <span>홈</span>
       <img src={BtnRight} />
-      <span>051910 ·KRX</span>
+      <span>051910 · KRX</span>
     </St.Info>
   );
 };
@@ -16,19 +16,17 @@ const IndexInfo = () => {
 const St = {
   Info: styled.div`
     display: flex;
+    align-items: center;
+
     width: 100%;
 
     img {
-      width: 2.8rem;
-      height: 2.8rem;
-      margin: auto 0;
+      margin: 0 0.6rem;
     }
 
     span {
-      line-height: 2.8rem;
+      ${theme.fonts.roboto_12};
     }
-
-    ${theme.fonts.roboto_12};
   `,
 };
 

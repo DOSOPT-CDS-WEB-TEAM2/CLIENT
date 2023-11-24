@@ -2,18 +2,20 @@ import React from 'react';
 import styled from 'styled-components';
 import { Check, Share } from '../../../assets';
 import theme from '../../../styles/theme';
-import { CommonButton } from '../../Common/buttons';
+import { CommonButton, CommonButtonContainer } from '../../Common/buttons';
 
 const IndexButton = () => {
   return (
     <St.Info>
-      <CommonButton>
-        <img src={Share} />
-      </CommonButton>
-      <CommonButton>
-        <img src={Check} />
-        추가됨
-      </CommonButton>
+      <CommonButtonContainer>
+        <CommonButton>
+          <img src={Share} />
+        </CommonButton>
+        <CommonButton>
+          <img src={Check} />
+          <span>추가됨</span>
+        </CommonButton>
+      </CommonButtonContainer>
     </St.Info>
   );
 };
@@ -21,18 +23,9 @@ export default IndexButton;
 const St = {
   Info: styled.div`
     display: flex;
+    flex-direction: row-reverse;
     width: 100%;
 
-    /* img {
-      width: 2.8rem;
-      height: 2.8rem;
-      margin: auto 0;
-    } */
-
-    span {
-      line-height: 2.8rem;
-    }
-
-    ${theme.fonts.roboto_12};
+    ${theme.fonts.roboto_12}
   `,
 };
