@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Title from './Title';
 import Price from './Price';
 
-const Article = () => {
+const MainInfo = () => {
   return (
     <>
       <Title />
@@ -22,4 +22,4 @@ const St = {
   `,
 };
 
-export default Article;
+export default MainInfo;

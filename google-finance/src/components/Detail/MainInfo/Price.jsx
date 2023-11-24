@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import { CommonButton } from '../../Common/buttons';
 import theme from '../../../styles/theme';
 
 const Price = () => {

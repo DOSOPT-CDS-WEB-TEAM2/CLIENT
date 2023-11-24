@@ -1,13 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 import HeaderIndex from '../components/Detail/HeaderIndex/HeaderIndex';
-import Article from '../components/Detail/Article/Article';
+import MainInfo from '../components/Detail/MainInfo/MainInfo';
 
 const MainDetail = () => {
   return (
     <HomeWrapper>
       <HeaderIndex />
-      <Article />
+      <MainInfo />
     </HomeWrapper>
   );
 };
