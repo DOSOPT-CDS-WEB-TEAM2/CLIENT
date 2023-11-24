@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 
-const NewsArticle = () => {
-  const [imgUrl, setImgUrl] = useState('');
+const NewsArticle = ({ article }) => {
+  //   const [imgUrl, setImgUrl] = useState('');
+  const { title, imgUrl, createdAt, publisher } = article;
   return (
     <St.NewsArticleContainer>
-      <St.ArticleEtcInfo>YouTube | 2시간 전</St.ArticleEtcInfo>
-      <St.ArticleTitle>공매도 전면 금지...갑자기 왜? (2023.11.05/뉴스데스크/MBC)</St.ArticleTitle>
+      <St.ArticleEtcInfo>{publisher} | 2시간 전</St.ArticleEtcInfo>
+      <St.ArticleTitle>{title}</St.ArticleTitle>
       {imgUrl && <St.ArticlePictureWrapper></St.ArticlePictureWrapper>}
     </St.NewsArticleContainer>
   );

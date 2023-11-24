@@ -1,12 +1,19 @@
 import React from 'react';
 import styled from 'styled-components';
 import NewsArticle from '../components/Common/NewsArticle';
+import { ARTICLE_DUMMY } from './../assets/data/ARTICLE_DUMMY';
 
 const Main = () => {
   return (
     <St.MainContainer>
       구글 금융 페이지입니다.
-      <NewsArticle />
+      {ARTICLE_DUMMY.map((article, idx) => (
+        <NewsArticle
+          key={idx}
+          //key ={article.id}
+          article={article}
+        />
+      ))}
     </St.MainContainer>
   );
 };
