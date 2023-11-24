@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { GraphImage } from '../../../assets';
 
-const GraphData = () => {
+const InfoGraph = () => {
   return (
     <St.Container>
       <img src={GraphImage} alt="LG화학그래프" />
@@ -20,4 +20,4 @@ const St = {
   `,
 };
 
-export default GraphData;
+export default InfoGraph;

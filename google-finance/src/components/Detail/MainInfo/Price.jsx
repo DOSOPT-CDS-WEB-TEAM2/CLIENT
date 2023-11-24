@@ -32,8 +32,8 @@ const St = {
     .price_detail {
       margin-top: 0;
 
-      ${theme.colors.black}
-      ${theme.fonts.roboto_12_cond}
+      color: ${theme.colors.black};
+      ${theme.fonts.roboto_12_cond};
     }
   `,
 };

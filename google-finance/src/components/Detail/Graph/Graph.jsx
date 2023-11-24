@@ -1,13 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
 import GraphButton from './GraphButton';
-import GraphData from './GraphData';
+import InfoGraph from './InfoGraph';
+import InfoText from './InfoText';
 
 const Graph = () => {
   return (
     <>
       <GraphButton />
-      <GraphData />
+      <InfoGraph />
+      <InfoText />
     </>
   );
 };
