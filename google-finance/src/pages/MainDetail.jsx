@@ -2,12 +2,14 @@ import React from 'react';
 import styled from 'styled-components';
 import HeaderIndex from '../components/Detail/HeaderIndex/HeaderIndex';
 import MainInfo from '../components/Detail/MainInfo/MainInfo';
+import Graph from '../components/Detail/Graph/Graph';
 
 const MainDetail = () => {
   return (
     <HomeWrapper>
       <HeaderIndex />
       <MainInfo />
+      <Graph />
     </HomeWrapper>
   );
 };
