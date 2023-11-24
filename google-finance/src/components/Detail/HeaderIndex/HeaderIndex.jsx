@@ -1,12 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 import IndexInfo from './IndexInfo';
+import IndexButton from './IndexButton';
 
 const HeaderIndex = () => {
   return (
     <St.Container>
       <IndexInfo />
-      {/* <IndexButton /> */}
+      <IndexButton />
     </St.Container>
   );
 };

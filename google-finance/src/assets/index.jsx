@@ -5,3 +5,5 @@ export { default as SearchIcon } from './icon/ic_search.svg';
 export { default as FooterLogoImage } from './img/Google.svg';
 export { default as LineImage } from './img/LineImage.svg';
 export { default as BtnRight } from './icon/ic_btn_right.svg';
+export { default as Share } from './icon/share.svg';
+export { default as Check } from './icon/ic_check.svg';
