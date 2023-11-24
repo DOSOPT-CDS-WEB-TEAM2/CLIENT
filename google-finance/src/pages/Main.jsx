@@ -6,7 +6,6 @@ import { ARTICLE_DUMMY } from './../assets/data/ARTICLE_DUMMY';
 const Main = () => {
   return (
     <St.MainContainer>
-      구글 금융 페이지입니다.
       {ARTICLE_DUMMY.map((article, idx) => (
         <NewsArticle
           key={idx}
