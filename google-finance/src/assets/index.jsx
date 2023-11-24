@@ -11,3 +11,6 @@ export { default as NavMenuBlackIcon } from './icon/ic_menu_search_black.svg';
 export { default as NavAddIcon } from './icon/add_icon.svg';
 export { default as NavSettingIcon } from './icon/ic_setting.svg';
 export { default as NavChatIcon } from './icon/icon_chat.svg';
+export { default as BtnRight } from './icon/btn_right.svg';
+export { default as Share } from './icon/share.svg';
+export { default as Check } from './icon/ic_check.svg';
