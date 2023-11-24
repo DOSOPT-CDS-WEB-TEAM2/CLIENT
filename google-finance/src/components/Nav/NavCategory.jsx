@@ -13,12 +13,11 @@ const NavCategory = ({ icon, text }) => {
 const StyledSpan = styled.span`
   display: flex;
   align-items: center;
-  margin-bottom: 1.4rem;
-  ${(props) => props.theme.fonts.roboto_16};
 
-  img {
-    margin-right: 1.4rem;
-  }
+  gap: 1.4rem;
+  margin-bottom: 3rem;
+
+  ${(props) => props.theme.fonts.roboto_16};
 `;
 
 export default NavCategory;
