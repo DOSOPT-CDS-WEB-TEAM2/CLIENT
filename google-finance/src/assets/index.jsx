@@ -14,3 +14,5 @@ export { default as NavChatIcon } from './icon/icon_chat.svg';
 export { default as BtnRight } from './icon/btn_right.svg';
 export { default as Share } from './icon/share.svg';
 export { default as Check } from './icon/ic_check.svg';
+export { default as GraphRedImage } from './img/graph_red.png';
+export { default as ArrowUpIcon } from './icon/ic_arrow_up.svg';
