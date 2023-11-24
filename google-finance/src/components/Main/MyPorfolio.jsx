@@ -1,13 +1,35 @@
 import React from 'react';
 import styled from 'styled-components';
+import EachPortfolio from './EachPortfolio';
 
 const MyPorfolio = () => {
+  const PORTFOLIO_DUMMY = [
+    {
+      id: 1,
+      name: '051910',
+      company: 'LG화학',
+      imgUrl: null,
+      price: '\\512,000.00',
+      percentage: 8.7,
+    },
+    {
+      id: 2,
+      name: 'APPL',
+      company: '애플',
+      imgUrl: null,
+      price: '$182.41',
+      percentage: -0.26,
+    },
+  ];
   return (
     <St.MyPortfolioContainer>
       <St.MyPortfolioHeader>
         <St.Title>내 포트폴리오</St.Title>
         <St.AddButton>추가</St.AddButton>
       </St.MyPortfolioHeader>
+      {PORTFOLIO_DUMMY.map((each, idx) => (
+        <EachPortfolio key={idx} portfolio={each} />
+      ))}
     </St.MyPortfolioContainer>
   );
 };
