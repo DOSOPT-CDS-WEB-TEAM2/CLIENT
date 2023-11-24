@@ -26,8 +26,6 @@ const St = {
     span {
       ${theme.fonts.productsans_24};
     }
-
-    border: 1px solid red;
   `,
 };
 

@@ -1,9 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
 import Title from './Title';
+import Price from './Price';
 
 const Article = () => {
-  return <Title />;
+  return (
+    <>
+      <Title />
+      <Price />
+    </>
+  );
 };
 
 const St = {
