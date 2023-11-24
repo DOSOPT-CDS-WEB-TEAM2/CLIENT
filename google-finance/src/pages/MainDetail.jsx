@@ -1,11 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 import HeaderIndex from '../components/Detail/HeaderIndex/HeaderIndex';
+import PercButton from '../components/Detail/HeaderIndex/PercentButton';
 
 const MainDetail = () => {
   return (
     <HomeWrapper>
       <HeaderIndex />
+      <PercButton />
     </HomeWrapper>
   );
 };
