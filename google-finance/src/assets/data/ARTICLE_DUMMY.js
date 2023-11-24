@@ -1,3 +1,4 @@
+import { NewsImg } from '../img/dummy/dummy';
 export const ARTICLE_DUMMY = [
   {
     id: 1,
@@ -8,15 +9,15 @@ export const ARTICLE_DUMMY = [
   },
   {
     id: 2,
-    title: '“은퇴 후 시골에 집 짓고 살고 싶다... 전문가들은 뜯어 말리는 이유[왕개미연구소]',
-    imageUrl: null,
+    title: '“은퇴 후 시골에 집 짓고 살고 싶다... 전문가들은 뜯어 말리는 이유',
+    imageUrl: NewsImg,
     createdAt: '2023-11-20T17:27:07',
     publisher: '조선일보',
   },
   {
     id: 3,
     title: '“전기차는 팔수록 적자" 수요 둔화에 이차 전지 안갯속으로',
-    imageUrl: null,
+    imageUrl: NewsImg,
     createdAt: '2023-11-20T17:27:09',
     publisher: '동아일보',
   },
