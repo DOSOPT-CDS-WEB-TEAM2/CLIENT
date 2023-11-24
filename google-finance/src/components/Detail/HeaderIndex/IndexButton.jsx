@@ -19,7 +19,9 @@ const IndexButton = () => {
     </St.Info>
   );
 };
+
 export default IndexButton;
+
 const St = {
   Info: styled.div`
     display: flex;

@@ -19,10 +19,6 @@ const St = {
     flex-direction: column;
     justify-content: center;
   `,
-  Data: styled.div`
-    width: 34.5rem;
-    height: 4.3rem;
-  `,
 };
 
 export default InfoText;
