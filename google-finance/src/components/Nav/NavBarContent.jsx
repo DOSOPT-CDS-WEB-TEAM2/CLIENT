@@ -1,13 +1,24 @@
 import React from 'react';
 import styled from 'styled-components';
 import NavCategory from './NavCategory';
-import { NavDeleteIcon, NavMenuBlackIcon, LogoImage, NavHomeIcon, NavMenuSearchIcon } from '../../assets/index';
+import NavHr from './NavHr';
+import NavMyItem from './NavMyItem';
+import {
+  NavSettingIcon,
+  NavChatIcon,
+  NavDeleteIcon,
+  NavMenuBlackIcon,
+  LogoImage,
+  NavHomeIcon,
+  NavMenuSearchIcon,
+} from '../../assets/index';
 
 const NavBarContent = ({ onClose }) => {
+  const navItems = ['포트폴리오', '관심종목'];
+
   return (
     <St.Overlay>
       <St.ModalContentContainer>
-        {/* 헤더 부분 푸터 부분 구현하고 포폴 관종하고 가장거래 활발 주식까지 */}
         <St.NavHeader>
           <St.NavCloseBtn src={NavDeleteIcon} alt="메뉴-닫기-버튼" onClick={onClose} />
           <img src={LogoImage} alt="구글금융-로고" />
@@ -15,13 +26,20 @@ const NavBarContent = ({ onClose }) => {
 
         <NavCategory icon={NavHomeIcon} text="홈" />
         <NavCategory icon={NavMenuBlackIcon} text="시장현황" />
+        <NavHr marginBottom="2.4rem" />
 
-        <span>포트폴리오</span>
-        <span>+ 추가</span>
-        <span>관심종목</span>
-        <span>+ 추가</span>
-        <h2>Nav Bar Test Title</h2>
-        <span>nav bar Content</span>
+        {navItems.map((item, index) => (
+          <NavMyItem key={index} item={item} />
+        ))}
+        <NavHr marginBottom="1rem" />
+
+        <St.NavApi>
+          <span>가장 거래가 활발한 주식</span>
+        </St.NavApi>
+        <NavHr marginBottom="1rem" />
+
+        <NavCategory icon={NavSettingIcon} text="설정" />
+        <NavCategory icon={NavChatIcon} text="의견보내기" />
       </St.ModalContentContainer>
     </St.Overlay>
   );
@@ -41,6 +59,15 @@ const St = {
     background-color: rgba(0, 0, 0, 0.7);
   `,
 
+  NavApi: styled.div`
+    height: 29.6rem;
+
+    span {
+      color: ${(props) => props.theme.colors.gray_2};
+      ${(props) => props.theme.fonts.roboto_14};
+    }
+  `,
+
   NavCloseBtn: styled.img`
     margin-right: 0.8rem;
   `,
@@ -48,6 +75,7 @@ const St = {
   NavHeader: styled.header`
     display: flex;
     align-items: flex-end;
+
     height: 9rem;
     padding-bottom: 1.6rem;
     margin-bottom: 3.1rem;
@@ -58,7 +86,7 @@ const St = {
     flex-direction: column;
     position: absolute;
 
-    width: 22.5rem;
+    width: 25rem;
     height: 100vh;
     bottom: 0;
     left: 0;
@@ -66,6 +94,10 @@ const St = {
     padding: 0 1.5rem;
     background-color: white;
     z-index: 1;
+
+    span {
+      ${(props) => props.theme.fonts.roboto_14};
+    }
   `,
 };
 
