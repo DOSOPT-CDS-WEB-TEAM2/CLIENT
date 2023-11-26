@@ -2,8 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { LogoImage, MenuIcon, SearchIcon, SubMenuIcon } from '../../assets/index';
-import NavBar from '../Nav/NavBar';
-
+import NavBar from '../../pages/NavBar';
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
