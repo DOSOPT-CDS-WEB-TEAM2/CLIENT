@@ -28,7 +28,6 @@ const St = {
     align-items: center;
     flex-direction: column;
 
-    position: absolute;
     bottom: 0;
 
     width: 99%;
