@@ -8,3 +8,4 @@ export { default as BtnRight } from './icon/btn_right.svg';
 export { default as Share } from './icon/share.svg';
 export { default as Check } from './icon/ic_check.svg';
 export { default as UpSmallIcon } from './icon/ic_arrow_up_small.svg';
+export { default as DownSmallIcon } from './icon/ic_arrow_down_small.svg';

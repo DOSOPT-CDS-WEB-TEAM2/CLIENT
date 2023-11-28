@@ -1,13 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
 import HeaderIndex from '../components/Detail/HeaderIndex/HeaderIndex';
-import PercButton from '../components/Detail/HeaderIndex/PercentButton';
+import { PercentButton, PercentButtonContainer } from '../components/Common/PercentButton';
 
 const MainDetail = () => {
   return (
     <HomeWrapper>
       <HeaderIndex />
-      <PercButton />
+      <PercentButtonContainer>
+        <PercentButton value={'8.7%'} />
+      </PercentButtonContainer>
     </HomeWrapper>
   );
 };
