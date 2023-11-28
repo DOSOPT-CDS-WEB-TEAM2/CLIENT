@@ -8,6 +8,7 @@ import InOutCome from '../components/Detail/InOutCome/InOutCome';
 import MainGraph from '../components/Detail/Graph/MainGraph';
 import axios from 'axios';
 import { useEffect } from 'react';
+import CompareInfo from '../components/Detail/Compare/CompareInfo';
 
 const MainDetail = () => {
   const DATA_ARR_COMPARE = ['매분기', '연간'];
@@ -16,7 +17,8 @@ const MainDetail = () => {
       <HeaderIndex />
       <MainInfo />
       <Compare />
-      <Graph data={DATA_ARR_COMPARE} />
+      {/* <Graph data={DATA_ARR_COMPARE} /> */}
+      <CompareInfo />
     </HomeWrapper>
   );
 };

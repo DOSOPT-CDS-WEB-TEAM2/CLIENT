@@ -1,51 +1,47 @@
 import React, { useState } from 'react';
-import styled from 'styled-components';
-import Title from './Title';
-import Price from './Price';
-import MainGraph from '../Graph/MainGraph';
+import CompareGraph from './CompareGraph';
 import { useEffect } from 'react';
 import axios from 'axios';
 
-const MainInfo = () => {
-  const [stockData, setStockData] = useState({
-    title: '',
-    currentPrice: '',
-    fluctuationPrice: '',
-    previousDayIncrease: '',
-    todayLowestPrice: '',
-    todayHighestPrice: '',
-    pastWeekLowestPrice: '',
-    pastWeekHighestPrice: '',
-    marketCapitalization: '',
-    averageTrading: '',
-    stockPriceReturn: '',
-    dividendYield: '',
+const CompareInfo = () => {
+  const [inOutComeData, setInOutComeData] = useState({
+    income: '',
+    comparedIncome: 0,
+    profitMargin: '',
+    comparedProfitMargin: 0,
+    operatingExpenses: '',
+    comparedOperatingExpenses: 0,
+    incomePerShare: '',
+    comparedIncomePerShare: 0,
+    ebitda: '',
+    comparedEbitda: 0,
+    effectiveTaxRate: '',
+    comparedEffectiveTaxRate: 0,
   });
 
-  const DATA_ARR_MAIN = ['1일', '5일', '1개월', '6개월', 'YTD', '1년'];
   useEffect(() => {
     const fetchData = async () => {
       console.log(import.meta.env.VITE_BASE_URL);
       try {
         console.log('요청 시작');
-        const response = await axios.get(`${import.meta.env.VITE_BASE_URL}/stock/051910`, {
+        const response = await axios.get(`${import.meta.env.VITE_BASE_URL}/income-statement/051910`, {
           headers: {
             'Content-Type': 'application/json',
           },
         });
-        setStockData({
-          ...stockData,
-          title: response.data.name,
-          currentPrice: response.data.currentPrice,
-          previousDayIncrease: response.data.previousDayIncrease,
-          todayLowestPrice: response.data.todayLowestPrice,
-          todayHighestPrice: response.data.todayHighestPrice,
-          pastWeekLowestPrice: response.data.pastWeekLowestPrice,
-          pastWeekHighestPrice: response.data.pastWeekHighestPrice,
-          marketCapitalization: response.data.marketCapitalization,
-          averageTrading: response.data.averageTrading,
-          stockPriceReturn: response.data.stockPriceReturn,
-          dividendYield: response.data.dividendYield,
+        setInOutComeData({
+          ...inOutComeData,
+          income: response.data.income,
+          profitMargin: response.data.profitMargin,
+          comparedProfitMargin: response.data.comparedProfitMargin,
+          operatingExpenses: response.data.operatingExpenses,
+          comparedOperatingExpenses: response.data.comparedOperatingExpenses,
+          incomePerShare: response.data.incomePerShare,
+          comparedIncomePerShare: response.data.comparedIncomePerShare,
+          ebitda: response.data.ebitda,
+          comparedEbitda: response.data.comparedEbitda,
+          effectiveTaxRate: response.data.effectiveTaxRate,
+          comparedEffectiveTaxRate: response.data.comparedEffectiveTaxRate,
         });
         console.log(response.data);
       } catch (error) {
@@ -57,11 +53,9 @@ const MainInfo = () => {
   }, []);
   return (
     <>
-      <Title title={stockData.title} />
-      <Price currentPrice={stockData.currentPrice} />
-      <MainGraph stockData={stockData} />
+      <CompareGraph inOutComeData={inOutComeData} />
     </>
   );
 };
 
-export default MainInfo;
+export default CompareInfo;
