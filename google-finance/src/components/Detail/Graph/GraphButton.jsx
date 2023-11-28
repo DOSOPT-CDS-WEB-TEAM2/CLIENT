@@ -3,15 +3,13 @@ import styled from 'styled-components';
 import { CommonButton, CommonButtonContainer } from '../../Common/buttons';
 
 export const GraphButton = () => {
+  const DATE_ARR = ['1일', '5일', '1개월', '6개월', 'YTD', '1년'];
   return (
     <St.Container>
       <CommonButtonContainer>
-        <CommonButton>1일</CommonButton>
-        <CommonButton>5일</CommonButton>
-        <CommonButton>1개월</CommonButton>
-        <CommonButton>6개월</CommonButton>
-        <CommonButton>YTD</CommonButton>
-        <CommonButton>1년</CommonButton>
+        {DATE_ARR.map((label, idx) => (
+          <CommonButton key={idx}>{label}</CommonButton>
+        ))}
       </CommonButtonContainer>
     </St.Container>
   );
