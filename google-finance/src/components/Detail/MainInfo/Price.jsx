@@ -2,10 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 import theme from '../../../styles/theme';
 
-const Price = () => {
+const Price = ({ currentPrice }) => {
   return (
     <St.Container>
-      <St.Price>₩512,000.00</St.Price>
+      <St.Price>{currentPrice}</St.Price>
       <St.PriceDetail>11월 6일, 오후 12시 45분 32초 UTC+9 KRW KRX 면책조항</St.PriceDetail>
     </St.Container>
   );

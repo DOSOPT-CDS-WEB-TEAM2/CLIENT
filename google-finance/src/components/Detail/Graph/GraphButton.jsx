@@ -3,11 +3,11 @@ import styled from 'styled-components';
 import { CommonButton, CommonButtonContainer } from '../../Common/buttons';
 
 export const GraphButton = () => {
-  const DATE_ARR = ['1일', '5일', '1개월', '6개월', 'YTD', '1년'];
+  const DATA_ARR = ['1일', '5일', '1개월', '6개월', 'YTD', '1년'];
   return (
     <St.Container>
       <CommonButtonContainer>
-        {DATE_ARR.map((label, idx) => (
+        {DATA_ARR.map((label, idx) => (
           <CommonButton key={idx}>{label}</CommonButton>
         ))}
       </CommonButtonContainer>
