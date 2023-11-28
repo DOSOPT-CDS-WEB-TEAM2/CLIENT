@@ -4,6 +4,7 @@ import HeaderIndex from '../components/Detail/HeaderIndex/HeaderIndex';
 import MainInfo from '../components/Detail/MainInfo/MainInfo';
 import Graph from '../components/Detail/Graph/Graph';
 import Compare from '../components/Detail/Compare/Compare';
+import InOutCome from '../components/Detail/InOutCome/InOutCome';
 
 const MainDetail = () => {
   return (
@@ -12,6 +13,7 @@ const MainDetail = () => {
       <MainInfo />
       <Graph />
       <Compare />
+      <InOutCome />
     </HomeWrapper>
   );
 };
