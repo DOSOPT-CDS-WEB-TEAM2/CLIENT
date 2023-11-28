@@ -1,14 +1,35 @@
 import React from 'react';
 import styled from 'styled-components';
+import HeaderIndex from '../components/MarketStatus/HeaderIndex/HeaderIndex';
+import MarketCategory from '../components/MarketStatus/MarketUSA/MarketCategory';
+import MarketUSA from '../components/MarketStatus/MarketUSA/MarketUSA';
+import NavHr from '../components/Nav/NavHr';
+import { MARKET_STATUS_USA } from '../assets/data';
 
 const MarketStatus = () => {
-  return <HomeContainer>시장 현황 페이지 입니다.</HomeContainer>;
+  const MARKET = MARKET_STATUS_USA;
+  return (
+    <HomeContainer>
+      <HeaderIndex />
+      <MarketCategory />
+
+      {MARKET.map((MARKET, index) => (
+        <div key={index}>
+          <NavHr marginBottom="0rem" width="100%" />
+          <MarketUSA
+            title={MARKET.name}
+            stockIndex={MARKET.currentStockIndex}
+            fluctuationRate={MARKET.fluctuationRate}
+          />
+        </div>
+      ))}
+    </HomeContainer>
+  );
 };
 
-const HomeContainer = styled.div`
+const HomeContainer = styled.section`
   display: flex;
   flex-direction: column;
-  max-width: 90%;
   margin: 0 auto;
 `;
 
