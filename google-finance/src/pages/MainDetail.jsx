@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import HeaderIndex from '../components/Detail/HeaderIndex/HeaderIndex';
 import MainInfo from '../components/Detail/MainInfo/MainInfo';
 import Graph from '../components/Detail/Graph/Graph';
+import Compare from '../components/Detail/Compare/Compare';
 
 const MainDetail = () => {
   return (
@@ -10,6 +11,7 @@ const MainDetail = () => {
       <HeaderIndex />
       <MainInfo />
       <Graph />
+      <Compare />
     </HomeWrapper>
   );
 };
