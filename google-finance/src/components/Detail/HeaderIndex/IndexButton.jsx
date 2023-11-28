@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Check, Share } from '../../../assets';
+import { CheckIcon, ShareIcon } from '../../../assets';
 import theme from '../../../styles/theme';
 import { CommonButton, CommonButtonContainer } from '../../Common/buttons';
 
@@ -9,10 +9,10 @@ const IndexButton = () => {
     <St.Info>
       <CommonButtonContainer>
         <CommonButton $hasOneIcon={true}>
-          <img src={Share} />
+          <img src={ShareIcon} />
         </CommonButton>
         <CommonButton>
-          <img src={Check} />
+          <img src={CheckIcon} />
           <span>추가됨</span>
         </CommonButton>
       </CommonButtonContainer>
