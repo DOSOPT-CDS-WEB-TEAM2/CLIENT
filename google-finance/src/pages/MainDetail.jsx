@@ -8,7 +8,7 @@ const MainDetail = () => {
     <HomeWrapper>
       <HeaderIndex />
       <PercentButtonContainer>
-        <PercentButton value={'8.7%'} />
+        <PercentButton value={'8.7'} />
       </PercentButtonContainer>
     </HomeWrapper>
   );
