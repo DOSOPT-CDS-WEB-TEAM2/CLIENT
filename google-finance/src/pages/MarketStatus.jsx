@@ -15,7 +15,7 @@ const MarketStatus = () => {
 
       {MARKET.map((MARKET, index) => (
         <div key={index}>
-          <NavHr marginBottom="0rem" width="100%" />
+          <hr />
           <MarketUSA
             title={MARKET.name}
             stockIndex={MARKET.currentStockIndex}
@@ -23,6 +23,7 @@ const MarketStatus = () => {
           />
         </div>
       ))}
+       <MarketCategory />
     </HomeContainer>
   );
 };

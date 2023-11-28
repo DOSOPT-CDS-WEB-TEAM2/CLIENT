@@ -4,7 +4,7 @@ const NavHr = styled.hr`
   position: relative;
 
   width: 25rem;
-  left: -1.5rem;
+  left: ${(props) => props.left};
   margin: 0;
 
   border: none;
