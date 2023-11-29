@@ -1,22 +1,32 @@
 import React from 'react';
 import styled from 'styled-components';
+import { RedImage } from '../../assets';
+import { BlueImage } from '../../assets';
+import { UpIcon } from '../../assets';
+import { DownIcon } from '../../assets';
 
 const EachPortfolio = ({ portfolio }) => {
   const { name, company, imageUrl, price, percentage } = portfolio;
   return (
     <St.EachPortfolioContainer>
       <St.FlexedColumnContainer>
-        <St.NameAndPrice>{name}</St.NameAndPrice>
+        <St.Name>{name}</St.Name>
         <St.Company>{company}</St.Company>
       </St.FlexedColumnContainer>
       <St.FlexedRowContainer>
         <St.GraphImg>
-          이미지
-          <img src={imageUrl} alt="그래프" />
+          {percentage > 0 ? <img src={RedImage} alt="상승그래프" /> : <img src={BlueImage} alt="하강그래프" />}
         </St.GraphImg>
         <St.FlexedColumnContainer align="right">
-          <St.NameAndPrice>{price}</St.NameAndPrice>
-          <St.Percentage percentage={percentage}>{Math.abs(percentage)}%</St.Percentage>
+          <St.Price>{price}</St.Price>
+          <St.Percentage percentage={percentage}>
+            {percentage > 0 ? (
+              <St.ArrowIcon src={UpIcon} alt="상승화살표" />
+            ) : (
+              <St.ArrowIcon src={DownIcon} alt="하강화살표" />
+            )}
+            {Math.abs(percentage).toFixed(2)}%
+          </St.Percentage>
         </St.FlexedColumnContainer>
       </St.FlexedRowContainer>
     </St.EachPortfolioContainer>
@@ -37,17 +47,24 @@ const St = {
     display: flex;
     flex-direction: column;
     align-items: ${({ align }) => align && 'flex-end'};
+
+    width: ${({ align }) => align && '9rem'};
   `,
   FlexedRowContainer: styled.div`
     display: flex;
     flex-direction: row;
   `,
 
-  NameAndPrice: styled.div`
+  Name: styled.div`
     margin: 1rem 0;
 
     color: ${({ theme }) => theme.colors.gray_1};
     ${({ theme }) => theme.fonts.roboto_18_bold};
+  `,
+  Price: styled.div`
+    margin: 1rem 0;
+
+    ${({ theme }) => theme.fonts.productsans_14_bold}
   `,
   Company: styled.div`
     color: ${({ theme }) => theme.colors.gray_2};
@@ -55,9 +72,10 @@ const St = {
   `,
   Percentage: styled.div`
     display: inline-flex;
-    /* align-items: center; */
     align-items: flex-end;
-    width: 7.7rem;
+    justify-content: center;
+
+    width: 7.1rem;
     height: 2.5rem;
     margin: 0 0 -0.4rem;
     padding: 0.4rem 1rem;
@@ -70,13 +88,17 @@ const St = {
       percentage > 0 ? theme.colors.red_background : theme.colors.blue_background};
   `,
   GraphImg: styled.div`
-    margin: 1rem 0;
     padding: 1rem;
   `,
   AddButton: styled.div`
     display: flex;
     align-items: end;
+
     color: ${({ theme }) => theme.colors.blue_main};
     ${({ theme }) => theme.fonts.rototo_12_bold};
+  `,
+  ArrowIcon: styled.img`
+    margin: auto;
+    margin-right: 0.4rem;
   `,
 };
