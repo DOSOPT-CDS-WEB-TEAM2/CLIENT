@@ -27,6 +27,7 @@ const St = {
     .category {
       display: flex;
       align-items: flex-start;
+      width: 5rem;
       ${theme.fonts.roboto_12}
       color: ${theme.colors.gray_2}
     }
@@ -35,11 +36,15 @@ const St = {
       ${theme.fonts.productsans_12}
       color: ${theme.colors.gray_1};
       margin-right: -5.2rem;
+      width: 6rem;
+      padding-right: 0;
+      text-align: right;
     }
 
     .change {
       ${theme.fonts.productsans_12}
       color: ${theme.colors.gray_1};
+      width: 7.1rem;
     }
   `,
 };
