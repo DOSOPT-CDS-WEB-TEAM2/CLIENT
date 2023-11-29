@@ -1,5 +1,3 @@
-import styled from 'styled-components';
-import theme from '../../../styles/theme';
 import { CommonButton, CommonButtonContainer } from '../../Common/buttons';
 
 const InOutComeInfoGraph = () => {

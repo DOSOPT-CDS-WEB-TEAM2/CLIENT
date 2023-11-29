@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import CompareGraph from './CompareGraph';
+import CompareGraph from './InOutComeGraph';
 import { useEffect } from 'react';
 import axios from 'axios';
 
-const CompareInfo = () => {
+const InOutComeInfo = () => {
   const [inOutComeData, setInOutComeData] = useState({
     income: '',
     comparedIncome: 0,
@@ -56,4 +56,4 @@ const CompareInfo = () => {
   );
 };
 
-export default CompareInfo;
+export default InOutComeInfo;

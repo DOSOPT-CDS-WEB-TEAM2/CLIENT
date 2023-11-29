@@ -8,8 +8,6 @@ const InOutCome = () => {
     <St.Container>
       <St.Header>손익 계산서</St.Header>
       <InOutComeInfoGraph />
-      {/*       
-    inoutcomeinfotext */}
     </St.Container>
   );
 };
