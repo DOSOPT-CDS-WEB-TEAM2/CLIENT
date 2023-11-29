@@ -6,9 +6,9 @@ export const PercentButton = ({ isUp, isSmall, value }) => {
   return (
     <St.PercentButton $isUp={isUp} $isSmall={isSmall}>
       {/* isUp==true && isSmall==false 인 경우는 없음 */}
-      {isUp && isSmall && <img src={UpSmallIcon} />}
-      {!isUp && isSmall && <img src={DownSmallIcon} />}
-      {!isUp && !isSmall && <img src={DownBigIcon} />}
+      {isUp && isSmall && <img src={UpSmallIcon} alt="작은-업-화살표" />}
+      {!isUp && isSmall && <img src={DownSmallIcon} alt="작은-다운-화살표" />}
+      {!isUp && !isSmall && <img src={DownBigIcon} alt="큰-다운-화살표" />}
       <span>{value}</span>
     </St.PercentButton>
   );
