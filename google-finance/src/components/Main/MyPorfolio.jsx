@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import EachPortfolio from './EachPortfolio';
+import { SmallIcon } from '../../assets';
 
 const MyPorfolio = () => {
   const PORTFOLIO_DUMMY = [
@@ -25,7 +26,10 @@ const MyPorfolio = () => {
     <St.MyPortfolioContainer>
       <St.MyPortfolioHeader>
         <St.Title>내 포트폴리오</St.Title>
-        <St.AddButton>추가</St.AddButton>
+        <St.AddButton>
+          <img src={SmallIcon} alt="추가아이콘" />
+          추가
+        </St.AddButton>
       </St.MyPortfolioHeader>
       {PORTFOLIO_DUMMY.map((each, idx) => (
         <>
@@ -59,14 +63,19 @@ const St = {
   `,
   AddButton: styled.div`
     display: flex;
-    align-items: end;
+    align-items: center;
+
+    margin-bottom: -0.5rem;
+
     color: ${({ theme }) => theme.colors.blue_main};
-    ${({ theme }) => theme.fonts.rototo_12_bold};
+    ${({ theme }) => theme.fonts.roboto_12_bold};
   `,
+
   Line: styled.hr`
-    margin: 0.7rem 0;
-    border: 0;
     height: 0.05rem;
+    margin: 0;
+
+    border: 0;
     background-color: ${({ theme }) => theme.colors.gray_3};
   `,
 };
