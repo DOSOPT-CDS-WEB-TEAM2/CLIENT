@@ -33,7 +33,7 @@ const St = {
 
     border-radius: ${({ $isSmall }) => ($isSmall ? '0.5rem' : '0.8rem')};
 
-    ${({ $isSmall }) => ($isSmall ? theme.fonts.productsans_14 : theme.fonts.productsans_18_bold)};
+    ${({ $isSmall }) => ($isSmall ? theme.fonts.productsans_14_bold : theme.fonts.productsans_18_bold)};
     background-color: ${({ $isUp }) => ($isUp ? theme.colors.red_background : theme.colors.blue_background)};
     color: ${({ $isUp }) => ($isUp ? theme.colors.red_main : theme.colors.blue_main)};
 
