@@ -5,16 +5,14 @@ import { PercentButton, PercentButtonContainer } from '../components/Common/Perc
 import MainInfo from '../components/Detail/MainInfo/MainInfo';
 import Graph from '../components/Detail/Graph/Graph';
 import Compare from '../components/Detail/Compare/Compare';
-import CompareIndex from '../components/Detail/Compare/CompareIndex';
 
 const MainDetail = () => {
   return (
     <HomeWrapper>
-      {/* <HeaderIndex />
+      <HeaderIndex />
       <MainInfo />
       <Graph />
-      <Compare /> */}
-      <CompareIndex />
+      <Compare />
     </HomeWrapper>
   );
 };

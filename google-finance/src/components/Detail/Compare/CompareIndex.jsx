@@ -4,18 +4,18 @@ import { SearchIcon } from '../../../assets';
 import theme from '../../../styles/theme';
 import { PercentButton, PercentButtonContainer } from '../../Common/PercentButton';
 
-const CompareIndex = () => {
+const CompareIndex = ({ name, code, price, percent }) => {
   return (
     <St.Container>
       <St.NameCodeContainer>
-        <St.Name>삼성SDI</St.Name>
-        <St.Code>006400</St.Code>
+        <St.Name>{name}</St.Name>
+        <St.Code>{code}</St.Code>
       </St.NameCodeContainer>
 
-      <St.Price>₩498,000.00</St.Price>
+      <St.Price>{price}</St.Price>
       <PercentButtonContainer>
         {' '}
-        <PercentButton isSmall={true} isUp={true} value={'9.69%'} />
+        <PercentButton isSmall={true} isUp={true} value={percent} />
       </PercentButtonContainer>
     </St.Container>
   );
@@ -27,10 +27,11 @@ const St = {
   Container: styled.div`
     display: flex;
     flex-direction: column;
+    flex-shrink: 0;
 
     width: 14.1rem;
     height: 9rem;
-    padding: 1rem 1.1rem 1rem 1rem;
+    padding: 1rem;
 
     border: 0.1rem solid ${theme.colors.gray_3};
     border-radius: 8px;
