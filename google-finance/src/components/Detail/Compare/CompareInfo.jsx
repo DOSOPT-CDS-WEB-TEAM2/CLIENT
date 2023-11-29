@@ -32,6 +32,7 @@ const CompareInfo = () => {
         setInOutComeData({
           ...inOutComeData,
           income: response.data.income,
+          comparedIncome: response.data.comparedIncome,
           profitMargin: response.data.profitMargin,
           comparedProfitMargin: response.data.comparedProfitMargin,
           operatingExpenses: response.data.operatingExpenses,

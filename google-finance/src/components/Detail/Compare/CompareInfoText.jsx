@@ -29,6 +29,7 @@ const CompareInfoText = ({
 
   return (
     <St.Container>
+      <InfoEach2 category={'(KRW)'} value={'2023년 6월'} change={'전년대비 변동'} />
       {CategoryList.map((category) => (
         <InfoEach2 key={category} category={category} value={Data[category][0]} change={Data[category][1]} />
       ))}

@@ -12,6 +12,7 @@ const CompareGraph = ({ inOutComeData }) => {
       <InfoGraph GraphImage={InOutComeGraphImage} />
       <CompareInfoText
         income={inOutComeData.income}
+        comparedIncome={inOutComeData.comparedIncome}
         profitMargin={inOutComeData.profitMargin}
         comparedProfitMargin={inOutComeData.comparedProfitMargin}
         operatingExpenses={inOutComeData.operatingExpenses}

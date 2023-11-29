@@ -1,13 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
 import theme from '../../../styles/theme';
+import { CommonButton } from '../../Common/buttons';
 
 const InfoEach2 = ({ category, value, change }) => {
   return (
     <St.Container>
       <span className="category">{category}</span>
       <span className="value">{value}</span>
-      <span className="change">{change}</span>
+      <span className="change">{change !== '전년대비 변동' ? <CommonButton>{change}</CommonButton> : change}</span>
     </St.Container>
   );
 };
@@ -32,13 +33,13 @@ const St = {
 
     .value {
       ${theme.fonts.productsans_12}
-      color: ${theme.colors.gray_1}
+      color: ${theme.colors.gray_1};
+      margin-right: -5.2rem;
     }
 
     .change {
       ${theme.fonts.productsans_12}
       color: ${theme.colors.gray_1};
-      margin-left: 5.6rem;
     }
   `,
 };
