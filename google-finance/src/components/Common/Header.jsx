@@ -1,19 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { LogoImage, MenuIcon, SearchIcon, SubMenuIcon } from '../../assets/index';
-
+import NavBar from '../../pages/NavBar';
 const Header = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <St.NavbarContainer>
-      <img src={MenuIcon} alt="구글금융-메뉴" className="menu-icon" />
-      <img src={LogoImage} alt="구글금융-로고" className="logo-image" />
-      <img src={SearchIcon} alt="구글금융-검색" className="search-icon" />
-      <img src={SubMenuIcon} alt="구글금융-세부메뉴" className="submenu-icon" />
-      <St.NavBarButton type="button">
-        <Link to="/detail">로그인</Link>
-      </St.NavBarButton>
-    </St.NavbarContainer>
+    <>
+      <St.NavbarContainer>
+        <img src={MenuIcon} alt="구글금융-메뉴" className="menu-icon" onClick={() => setIsOpen(true)} />
+        {isOpen && <NavBar onClose={() => setIsOpen(false)} />}
+        <img src={LogoImage} alt="구글금융-로고" className="logo-image" />
+        <img src={SearchIcon} alt="구글금융-검색" className="search-icon" />
+        <img src={SubMenuIcon} alt="구글금융-세부메뉴" className="submenu-icon" />
+        <St.NavBarButton type="button">
+          <Link to="/detail">로그인</Link>
+        </St.NavBarButton>
+      </St.NavbarContainer>
+    </>
   );
 };
 
