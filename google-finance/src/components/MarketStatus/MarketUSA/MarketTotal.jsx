@@ -3,9 +3,10 @@ import { GraphRed3xImage, ArrowUpSmallIcon } from '../../../assets';
 import styled from 'styled-components';
 import { FetchMarketData } from '../../Api/FetchData';
 import { PercentButton } from '../../Common/PercentButton';
+import { CommonRateButton } from '../../Common/buttons';
 import theme from '../../../styles/theme';
 
-const MarketUSA = () => {
+const MarketTotal = () => {
   const [marketStatus, setMarketStatus] = useState(null);
   const [error, setError] = useState(null);
 
@@ -31,17 +32,30 @@ const MarketUSA = () => {
     return <div>Loading...</div>;
   }
 
-  // "미국"에 해당하는 부분을 추출
-  const usMarketData = marketStatus?.미국;
+  const continents = Object.entries(marketStatus);
+
+  const renderContinentData = (continent) => {
+    const continentData = continents.find(([c]) => c === continent);
+    return continentData && <ContinentData data={continentData[1]} />;
+  };
 
   return (
     <div>
-      {usMarketData.map((item) => (
-        <MarketItem key={item.id} {...item} />
-      ))}
+      {renderContinentData('유럽')}
+      {renderContinentData('중동')}
+      {renderContinentData('아프리카')}
     </div>
   );
 };
+
+const ContinentData = ({ data }) => (
+  <div>
+    {data.map((item) => (
+      <MarketItem key={item.id} {...item} />
+    ))}
+  </div>
+);
+
 const MarketItem = ({ name, currentStockIndex, fluctuationRate }) => {
   const isUp = fluctuationRate > 0;
 
@@ -104,4 +118,4 @@ const St = {
   `,
 };
 
-export default MarketUSA;
+export default MarketTotal;

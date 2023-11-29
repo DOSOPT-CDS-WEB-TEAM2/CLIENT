@@ -4,6 +4,7 @@ import theme from '../styles/theme';
 import HeaderIndex from '../components/MarketStatus/HeaderIndex/HeaderIndex';
 import MarketCategory from '../components/MarketStatus/MarketUSA/MarketCategory';
 import MarketUSA from '../components/MarketStatus/MarketUSA/MarketUSA';
+import MarketTotal from '../components/MarketStatus/MarketUSA/MarketTotal';
 import { MARKET_STATUS_USA } from '../assets/data';
 
 const USA = '미주';
@@ -16,18 +17,12 @@ const MarketStatus = () => {
       <HeaderIndex />
       <MarketCategory category={USA} />
 
-      {MARKET.map((MARKET, index) => (
-        <div key={index}>
-          <MarketHr />
-          <MarketUSA
-            title={MARKET.name}
-            stockIndex={MARKET.currentStockIndex}
-            fluctuationRate={MARKET.fluctuationRate}
-          />
-        </div>
-      ))}
+      <MarketHr />
+      <MarketUSA />
 
       <MarketCategory category={MID_EAST_AFRICA} />
+      <MarketHr />
+      <MarketTotal />
     </HomeContainer>
   );
 };
