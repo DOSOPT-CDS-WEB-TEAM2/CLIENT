@@ -25,9 +25,7 @@ const MainInfo = () => {
   const DATA_ARR_MAIN = ['1일', '5일', '1개월', '6개월', 'YTD', '1년'];
   useEffect(() => {
     const fetchData = async () => {
-      console.log(import.meta.env.VITE_BASE_URL);
       try {
-        console.log('요청 시작');
         const response = await axios.get(`${import.meta.env.VITE_BASE_URL}/stock/051910`, {
           headers: {
             'Content-Type': 'application/json',
@@ -47,7 +45,6 @@ const MainInfo = () => {
           stockPriceReturn: response.data.stockPriceReturn,
           dividendYield: response.data.dividendYield,
         });
-        console.log(response.data);
       } catch (error) {
         console.error('에러:', error);
       }
