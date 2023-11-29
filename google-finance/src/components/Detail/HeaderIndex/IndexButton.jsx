@@ -9,10 +9,10 @@ const IndexButton = () => {
     <St.Info>
       <CommonButtonContainer>
         <CommonButton $hasOneIcon={true}>
-          <img src={ShareIcon} />
+          <img src={ShareIcon} alt="공유-아이콘" />
         </CommonButton>
         <CommonButton>
-          <img src={CheckIcon} />
+          <img src={CheckIcon} alt="체크-아이콘" />
           <span>추가됨</span>
         </CommonButton>
       </CommonButtonContainer>
