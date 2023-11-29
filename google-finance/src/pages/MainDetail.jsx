@@ -1,14 +1,24 @@
 import React from 'react';
 import styled from 'styled-components';
+import HeaderIndex from '../components/Detail/HeaderIndex/HeaderIndex';
+import MainInfo from '../components/Detail/MainInfo/MainInfo';
+import Graph from '../components/Detail/Graph/Graph';
+import Compare from '../components/Detail/Compare/Compare';
 
 const MainDetail = () => {
-  return <HomeWrapper>주가 상세페이지 입니다.</HomeWrapper>;
+  return (
+    <HomeWrapper>
+      <HeaderIndex />
+      <MainInfo />
+      <Graph />
+      <Compare />
+    </HomeWrapper>
+  );
 };
 
 const HomeWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  max-width: 90%;
   margin: 0 auto;
 `;
 

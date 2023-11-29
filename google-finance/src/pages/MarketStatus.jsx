@@ -2,10 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 
 const MarketStatus = () => {
-  return <HomeWrapper>시장 현황 페이지 입니다.</HomeWrapper>;
+  return <HomeContainer>시장 현황 페이지 입니다.</HomeContainer>;
 };
 
-const HomeWrapper = styled.div`
+const HomeContainer = styled.div`
   display: flex;
   flex-direction: column;
   max-width: 90%;
