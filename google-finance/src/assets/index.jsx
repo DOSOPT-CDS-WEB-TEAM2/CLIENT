@@ -8,3 +8,4 @@ export { default as BtnRight } from './icon/btn_right.svg';
 export { default as ShareIcon } from './icon/share.svg';
 export { default as CheckIcon } from './icon/ic_check.svg';
 export { default as GraphImage } from './img/graphImage.svg';
+export { default as InOutComeGraphImage } from './img/inOutComeImage.svg';

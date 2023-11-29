@@ -1,10 +1,15 @@
 import React from 'react';
 import Graph from '../Graph/Graph';
 import CompareInfoText from './CompareInfoText';
+import GraphButton from '../Graph/GraphButton';
+import InfoGraph from '../Graph/InfoGraph';
+import { InOutComeGraphImage } from '../../../assets';
 
 const CompareGraph = ({ inOutComeData }) => {
   return (
     <>
+      <GraphButton DATA_ARR={['매분기', '연간']} />
+      <InfoGraph GraphImage={InOutComeGraphImage} />
       <CompareInfoText
         income={inOutComeData.income}
         profitMargin={inOutComeData.profitMargin}

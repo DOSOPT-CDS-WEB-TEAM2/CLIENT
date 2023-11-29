@@ -2,8 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { CommonButton, CommonButtonContainer } from '../../Common/buttons';
 
-export const GraphButton = () => {
-  const DATA_ARR = ['1일', '5일', '1개월', '6개월', 'YTD', '1년'];
+export const GraphButton = ({ DATA_ARR }) => {
   return (
     <St.Container>
       <CommonButtonContainer>

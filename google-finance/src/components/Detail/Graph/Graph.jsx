@@ -2,6 +2,7 @@ import React from 'react';
 import GraphButton from './GraphButton';
 import InfoGraph from './InfoGraph';
 import InfoText from './InfoText';
+import { GraphImage } from '../../../assets';
 
 const Graph = ({
   previousDayIncrease,
@@ -16,8 +17,8 @@ const Graph = ({
 }) => {
   return (
     <>
-      <GraphButton BUTTON_DATA={'1ro'} />
-      <InfoGraph />
+      <GraphButton DATA_ARR={['1일', '5일', '1개월', '6개월', 'YTD', '1년']} />
+      <InfoGraph GraphImage={GraphImage} />
       <InfoText
         previousDayIncrease={previousDayIncrease}
         todayLowestPrice={todayLowestPrice}

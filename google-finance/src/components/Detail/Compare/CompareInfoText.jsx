@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import styled from 'styled-components';
-import InfoEach from '../Graph/InfoEach';
+import InfoEach2 from '../Graph/InfoEach2';
 
 const CompareInfoText = ({
   income,
@@ -19,18 +19,18 @@ const CompareInfoText = ({
   const CategoryList = ['수익', '운영비', '순이익', '주당이익', 'EBITDA', '유효세율'];
 
   const Data = {
-    수익: income,
-    운영비: profitMargin,
-    순이익: operatingExpenses,
-    주당이익: incomePerShare,
-    EBITDA: ebitda,
-    유효세율: effectiveTaxRate,
+    수익: [income, comparedIncome],
+    운영비: [profitMargin, comparedProfitMargin],
+    순이익: [operatingExpenses, comparedOperatingExpenses],
+    주당이익: [incomePerShare, comparedIncomePerShare],
+    EBITDA: [ebitda, comparedEbitda],
+    유효세율: [effectiveTaxRate, comparedEffectiveTaxRate],
   };
 
   return (
     <St.Container>
       {CategoryList.map((category) => (
-        <InfoEach key={category} category={category} value={Data[category]} />
+        <InfoEach2 key={category} category={category} value={Data[category][0]} change={Data[category][1]} />
       ))}
     </St.Container>
   );
