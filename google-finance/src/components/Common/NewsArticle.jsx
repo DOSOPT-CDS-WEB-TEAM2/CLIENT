@@ -30,15 +30,14 @@ const NewsArticle = ({ article }) => {
 export default NewsArticle;
 
 const St = {
-  NewsArticleContainer: styled.div`
+  NewsArticleContainer: styled.section`
     display: flex;
     justify-content: center;
 
     width: 35rem;
     margin: auto;
 
-    border-bottom: 0.05rem solid;
-    border-bottom-color: ${({ theme }) => theme.colors.gray_3};
+    border-bottom: 0.05rem solid ${theme.colors.gray_3};
   `,
   ArticleWrapper: styled.div`
     display: flex;
