@@ -14,7 +14,6 @@ const MainGraph = ({ stockData }) => {
         averageTrading={stockData.averageTrading}
         stockPriceReturn={stockData.stockPriceReturn}
         dividendYield={stockData.dividendYield}
-        dataArrMain={stockData.dataArrMain}
       />
     </>
   );

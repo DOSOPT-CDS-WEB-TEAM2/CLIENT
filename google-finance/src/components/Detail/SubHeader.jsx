@@ -9,6 +9,7 @@ const SubHeader = ({ title }) => {
 const St = {
   Container: styled.div`
     padding-left: 1.5rem;
+    margin-top: 2rem;
     color: ${theme.colors.gray_2};
     ${theme.fonts.roboto_14};
   `,

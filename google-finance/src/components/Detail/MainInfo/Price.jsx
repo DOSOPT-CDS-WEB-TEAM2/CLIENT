@@ -18,7 +18,8 @@ const St = {
     width: 100%;
     height: 9rem;
     padding: 0 1.5rem;
-    border: 0.05rem solid ${theme.colors.gray_3};
+    border-top: 0.05rem solid ${theme.colors.gray_3};
+    border-bottom: 0.05rem solid ${theme.colors.gray_3};
   `,
   Price: styled.div`
     margin-top: 1.2rem;

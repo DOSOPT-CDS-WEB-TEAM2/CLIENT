@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import styled from 'styled-components';
 import Title from './Title';
 import Price from './Price';
 import MainGraph from '../Graph/MainGraph';
@@ -8,7 +7,7 @@ import axios from 'axios';
 
 const MainInfo = () => {
   const [stockData, setStockData] = useState({
-    title: '',
+    name: '',
     currentPrice: '',
     fluctuationPrice: '',
     previousDayIncrease: '',
@@ -22,7 +21,6 @@ const MainInfo = () => {
     dividendYield: '',
   });
 
-  const DATA_ARR_MAIN = ['1일', '5일', '1개월', '6개월', 'YTD', '1년'];
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -33,7 +31,7 @@ const MainInfo = () => {
         });
         setStockData({
           ...stockData,
-          title: response.data.name,
+          name: response.data.name,
           currentPrice: response.data.currentPrice,
           previousDayIncrease: response.data.previousDayIncrease,
           todayLowestPrice: response.data.todayLowestPrice,
@@ -54,7 +52,7 @@ const MainInfo = () => {
   }, []);
   return (
     <>
-      <Title title={stockData.title} />
+      <Title title={stockData.name} />
       <Price currentPrice={stockData.currentPrice} />
       <MainGraph stockData={stockData} />
     </>
