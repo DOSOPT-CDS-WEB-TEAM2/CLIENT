@@ -21,5 +21,7 @@ export { default as NavSettingIcon } from './icon/ic_setting.svg';
 export { default as NavChatIcon } from './icon/icon_chat.svg';
 
 export { default as GraphRedImage } from './img/graph_red.png';
+
+export { default as GraphImage } from './img/graphImage.svg';
 export { default as ArrowUpIcon } from './icon/ic_arrow_up.svg';
 export { default as ArrowUpSmallIcon } from './icon/ic_arrow_up_small.svg';
