@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import theme from '../../../styles/theme';
+import theme from '../../styles/theme';
 
 const SubHeader = ({ title }) => {
   return <St.Container>{title}</St.Container>;
@@ -8,7 +8,7 @@ const SubHeader = ({ title }) => {
 
 const St = {
   Container: styled.div`
-    margin-bottom: 2rem;
+    padding-left: 1.5rem;
     color: ${theme.colors.gray_2};
     ${theme.fonts.roboto_14};
   `,

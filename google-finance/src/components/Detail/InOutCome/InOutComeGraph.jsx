@@ -3,10 +3,12 @@ import GraphButton from '../Graph/GraphButton';
 import InfoGraph from '../Graph/InfoGraph';
 import { InOutComeGraphImage } from '../../../assets';
 import InOutComeInfoText from './InOutComeInfoText';
+import SubHeader from '../SubHeader';
 
 const InOutComeGraph = ({ inOutComeData }) => {
   return (
     <>
+      <SubHeader title={'손익계산서'} />
       <GraphButton DATA_ARR={['매분기', '연간']} />
       <InfoGraph GraphImage={InOutComeGraphImage} />
       <InOutComeInfoText
