@@ -5,7 +5,6 @@ export { default as SearchIcon } from './icon/ic_search.svg';
 export { default as FooterLogoImage } from './img/Google.svg';
 export { default as LineImage } from './img/LineImage.svg';
 
-export { default as BtnRightIcon } from './icon/btn_right.svg';
 export { default as ShareIcon } from './icon/share.svg';
 export { default as CheckIcon } from './icon/ic_check.svg';
 export { default as UpSmallIcon } from './icon/arrow.up_small.svg';
@@ -26,6 +25,4 @@ export { default as ArrowUpIcon } from './icon/ic_arrow_up.svg';
 export { default as ArrowUpSmallIcon } from './icon/ic_arrow_up_small.svg';
 export { default as BtnRightIcon } from './icon/btn_right_mar.svg';
 
-export { default as ShareIcon } from './icon/share.svg';
-export { default as CheckIcon } from './icon/ic_check.svg';
 export { default as GraphImage } from './img/graphImage.svg';
