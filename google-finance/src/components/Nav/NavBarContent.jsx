@@ -1,10 +1,9 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import NavCategory from './NavCategory';
 import NavHr from './NavHr';
 import { Link } from 'react-router-dom';
 import NavMyItem from './NavMyItem';
-import { SIDE_DUMMY } from '../../assets/data';
 import StockList from './ActiveStock/StockList';
 import theme from '../../styles/theme';
 import {
@@ -18,38 +17,47 @@ import {
 
 const NavBarContent = ({ onClose }) => {
   const ITEMS = ['포트폴리오', '관심종목'];
-  const STOCKS = SIDE_DUMMY;
+  const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    setIsOpen(true);
+  }, []);
+
+  const handleClose = () => {
+    setIsOpen(false);
+    setTimeout(() => {
+      onClose();
+    }, 300);
+  };
 
   return (
-    <St.Overlay>
-      <St.ModalContentContainer>
-        <St.NavHeader>
-          <St.NavCloseBtn src={NavDeleteIcon} alt="메뉴-닫기-버튼" onClick={onClose} />
-          <img src={LogoImage} alt="구글금융-로고" />
-        </St.NavHeader>
+    <St.NavBarContentContainer isOpen={isOpen} onClick={(e) => e.stopPropagation()}>
+      <St.NavHeader>
+        <St.NavCloseBtn src={NavDeleteIcon} alt="메뉴-닫기-버튼" onClick={handleClose} />
+        <img src={LogoImage} alt="구글금융-로고" />
+      </St.NavHeader>
 
-        <NavCategory icon={NavHomeIcon} text="홈" />
-        <Link to="/market">
-          <NavCategory icon={NavMenuBlackIcon} text="시장현황" />
-        </Link>
+      <NavCategory icon={NavHomeIcon} text="홈" />
+      <Link to="/market">
+        <NavCategory icon={NavMenuBlackIcon} text="시장현황" />
+      </Link>
 
-        <NavHr marginBottom="2.4rem" left="-1.5rem" />
+      <NavHr marginBottom="2.4rem" left="-1.5rem" />
 
-        {ITEMS.map((item, index) => (
-          <NavMyItem key={index} item={item} />
-        ))}
-        <NavHr marginBottom="1rem" left="-1.5rem" />
+      {ITEMS.map((item, index) => (
+        <NavMyItem key={index} item={item} />
+      ))}
+      <NavHr marginBottom="1rem" left="-1.5rem" />
 
-        <St.NavApiContainers>
-          <St.NavTitle>가장 거래가 활발한 주식</St.NavTitle>
-          <StockList />
-        </St.NavApiContainers>
+      <St.NavApiContainers>
+        <St.NavTitle>가장 거래가 활발한 주식</St.NavTitle>
+        <StockList />
+      </St.NavApiContainers>
 
-        <NavHr marginBottom="1rem" left="-1.5rem" />
-        <NavCategory icon={NavSettingIcon} text="설정" />
-        <NavCategory icon={NavChatIcon} text="의견보내기" />
-      </St.ModalContentContainer>
-    </St.Overlay>
+      <NavHr marginBottom="1rem" left="-1.5rem" />
+      <NavCategory icon={NavSettingIcon} text="설정" />
+      <NavCategory icon={NavChatIcon} text="의견보내기" />
+    </St.NavBarContentContainer>
   );
 };
 
@@ -58,7 +66,7 @@ const St = {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
+    position: fixed;
 
     width: 100%;
     height: 100%;
@@ -115,10 +123,12 @@ const St = {
     margin-bottom: 3.1rem;
   `,
 
-  ModalContentContainer: styled.div`
+  NavBarContentContainer: styled.div`
     display: flex;
     flex-direction: column;
-    position: absolute;
+    position: fixed;
+    transform: ${({ isOpen }) => (isOpen ? 'translateX(0)' : 'translateX(-100%)')};
+    transition: transform 0.3s ease-in-out;
 
     width: 25rem;
     height: 100vh;
