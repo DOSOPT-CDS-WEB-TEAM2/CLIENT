@@ -5,7 +5,7 @@ import NavHr from './NavHr';
 import { Link } from 'react-router-dom';
 import NavMyItem from './NavMyItem';
 import { SIDE_DUMMY } from '../../assets/data';
-import ActiveStock from './ActiveStock';
+import StockList from './ActiveStock/StockList';
 import theme from '../../styles/theme';
 import {
   NavSettingIcon,
@@ -42,8 +42,7 @@ const NavBarContent = ({ onClose }) => {
 
         <St.NavApiContainers>
           <St.NavTitle>가장 거래가 활발한 주식</St.NavTitle>
-
-          <ActiveStock />
+          <StockList />
         </St.NavApiContainers>
 
         <NavHr marginBottom="1rem" left="-1.5rem" />
@@ -65,6 +64,7 @@ const St = {
     height: 100%;
     top: 0;
     left: 0;
+    z-index: 1;
     background-color: rgba(0, 0, 0, 0.7);
   `,
 
@@ -72,8 +72,10 @@ const St = {
     padding: 0 0 1rem 0;
   `,
 
-  NavTitle: styled.span`
+  NavTitle: styled.div`
     color: ${theme.colors.gray_2};
+    ${theme.fonts.roboto_14};
+    margin: 1rem 0;
   `,
 
   CommonButton: styled.button`
