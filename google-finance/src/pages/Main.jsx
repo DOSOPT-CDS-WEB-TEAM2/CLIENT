@@ -33,12 +33,18 @@ const St = {
     margin: 0 auto;
   `,
   StockContainer: styled.section`
-    display: flex;
-    flex-direction: row;
-
-    margin: 0.4rem 0.5rem 1rem;
-    flex-wrap: nowrap;
-    overflow-x: auto;
+    white-space: nowrap;
+    overflow-x: scroll;
     overflow-y: hidden;
+
+    /* IE and Edge */
+    -ms-overflow-style: none;
+    /* Firefox */
+    scrollbar-width: none;
+    /* Chrome , Safari , Opera */
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    margin: 0.4rem 0.5rem 1rem;
   `,
 };
