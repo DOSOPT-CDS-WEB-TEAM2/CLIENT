@@ -1,10 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import styled from 'styled-components';
-import theme from '../../styles/theme';
 import NewsArticle from '../Common/NewsArticle';
 import SubHeader from './SubHeader';
 import axios from 'axios';
-import { ARTICLE_DUMMY } from '../../assets/data/ARTICLE_DUMMY';
 
 const MarketNews = () => {
   const [newsData, setNewsData] = useState([]);
@@ -29,10 +26,8 @@ const MarketNews = () => {
     fetchNewsData();
   }, []);
 
-  // Filter newsData to include only articles with id 8, 9, and 10
   const filteredNewsData = newsData.filter((article) => [8, 9, 10].includes(article.id));
-  console.log(filteredNewsData);
-  console.log(ARTICLE_DUMMY);
+
   return (
     <>
       <SubHeader title={'시장 뉴스'} />

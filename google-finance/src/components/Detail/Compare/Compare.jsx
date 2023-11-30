@@ -21,7 +21,6 @@ const Compare = () => {
           },
         });
         setCompareData(response.data);
-        console.log(response.data);
       } catch (error) {
         console.error('에러:', error);
       }
@@ -49,9 +48,3 @@ const Compare = () => {
 };
 
 export default Compare;
-
-const St = {
-  Container: styled.div`
-    padding-left: 1rem;
-  `,
-};

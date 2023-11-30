@@ -1,9 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import { CommonButton } from '../../Common/buttons';
 import { PercentButton, PercentButtonContainer } from '../../Common/PercentButton';
 import theme from '../../../styles/theme';
-import { useState } from 'react';
 
 const Title = ({ title }) => {
   return (
