@@ -32,10 +32,10 @@ const MyPorfolio = () => {
         </St.AddButton>
       </St.MyPortfolioHeader>
       {PORTFOLIO_DUMMY.map((each, idx) => (
-        <>
+        <div key={idx}>
           <EachPortfolio key={idx} portfolio={each} />
           {idx !== PORTFOLIO_DUMMY.length - 1 && <St.Line />}
-        </>
+        </div>
       ))}
     </St.MyPortfolioContainer>
   );

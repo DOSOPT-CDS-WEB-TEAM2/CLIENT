@@ -2,8 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import { RedImage } from '../../assets';
 import { BlueImage } from '../../assets';
-import { UpIcon } from '../../assets';
-import { DownIcon } from '../../assets';
+import { UpSmallIcon } from '../../assets';
+import { DownSmallIcon } from '../../assets';
 
 const EachPortfolio = ({ portfolio }) => {
   const { name, company, imageUrl, price, percentage } = portfolio;
@@ -21,9 +21,9 @@ const EachPortfolio = ({ portfolio }) => {
           <St.Price>{price}</St.Price>
           <St.Percentage percentage={percentage}>
             {percentage > 0 ? (
-              <St.ArrowIcon src={UpIcon} alt="상승화살표" />
+              <St.ArrowIcon src={UpSmallIcon} alt="상승화살표" />
             ) : (
-              <St.ArrowIcon src={DownIcon} alt="하강화살표" />
+              <St.ArrowIcon src={DownSmallIcon} alt="하강화살표" />
             )}
             {Math.abs(percentage).toFixed(2)}%
           </St.Percentage>
