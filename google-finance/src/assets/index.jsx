@@ -24,8 +24,4 @@ export { default as GraphRedImage } from './img/graph_red.png';
 export { default as GraphRed3xImage } from './img/graph_red3x.svg';
 export { default as ArrowUpIcon } from './icon/ic_arrow_up.svg';
 export { default as ArrowUpSmallIcon } from './icon/ic_arrow_up_small.svg';
-export { default as BtnRightIcon } from './icon/btn_right_mar.svg';
-
-export { default as ShareIcon } from './icon/share.svg';
-export { default as CheckIcon } from './icon/ic_check.svg';
 export { default as GraphImage } from './img/graphImage.svg';
