@@ -29,20 +29,10 @@ const MainInfo = () => {
             'Content-Type': 'application/json',
           },
         });
-        setStockData({
-          ...stockData,
-          name: response.data.name,
-          currentPrice: response.data.currentPrice,
-          previousDayIncrease: response.data.previousDayIncrease,
-          todayLowestPrice: response.data.todayLowestPrice,
-          todayHighestPrice: response.data.todayHighestPrice,
-          pastWeekLowestPrice: response.data.pastWeekLowestPrice,
-          pastWeekHighestPrice: response.data.pastWeekHighestPrice,
-          marketCapitalization: response.data.marketCapitalization,
-          averageTrading: response.data.averageTrading,
-          stockPriceReturn: response.data.stockPriceReturn,
-          dividendYield: response.data.dividendYield,
-        });
+        setStockData((prevData) => ({
+          ...prevData,
+          ...response.data,
+        }));
       } catch (error) {
         console.error('에러:', error);
       }
