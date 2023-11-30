@@ -4,7 +4,8 @@ import { SearchIcon } from '../../../assets';
 import theme from '../../../styles/theme';
 import { PercentButton, PercentButtonContainer } from '../../Common/PercentButton';
 
-const CompareIndex = ({ name, code, price, percent }) => {
+const CompareIndex = ({ index }) => {
+  const { code, name, currentPrice, fluctuationRate } = index;
   return (
     <St.Container>
       <St.NameCodeContainer>
@@ -12,10 +13,10 @@ const CompareIndex = ({ name, code, price, percent }) => {
         <St.Code>{code}</St.Code>
       </St.NameCodeContainer>
 
-      <St.Price>{price}</St.Price>
+      <St.Price>{currentPrice}</St.Price>
       <PercentButtonContainer>
         {' '}
-        <PercentButton isSmall={true} isUp={true} value={percent} />
+        <PercentButton isSmall={true} isUp={true} value={fluctuationRate} />
       </PercentButtonContainer>
     </St.Container>
   );

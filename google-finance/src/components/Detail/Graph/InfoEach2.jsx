@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import theme from '../../../styles/theme';
-import { CommonButton } from '../../Common/buttons';
 import { PercentButton } from '../../Common/PercentButton';
 
 const InfoEach2 = ({ category, value, change }) => {

@@ -8,6 +8,7 @@ import CompareHeader from '../components/Detail/Compare/CompareHeader';
 import EachPortfolio from '../components/Main/EachPortfolio';
 import NewsArticle from '../components/Common/NewsArticle';
 import MarketNews from '../components/Detail/MarketNews';
+import Compare from '../components/Detail/Compare/Compare';
 
 const MainDetail = () => {
   const myPortfolio = {
@@ -21,8 +22,7 @@ const MainDetail = () => {
     <HomeWrapper>
       <HeaderIndex />
       <MainInfo />
-      <CompareHeader />
-      <EachPortfolio portfolio={myPortfolio} />
+      <Compare />
       <MarketNews />
       <InOutComeInfo />
     </HomeWrapper>
