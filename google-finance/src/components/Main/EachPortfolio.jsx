@@ -1,31 +1,28 @@
 import React from 'react';
 import styled from 'styled-components';
-import { RedImage } from '../../assets';
-import { BlueImage } from '../../assets';
-import { UpSmallIcon } from '../../assets';
-import { DownSmallIcon } from '../../assets';
+import { RedImage, BlueImage, UpSmallIcon, DownSmallIcon } from '../../assets';
 
 const EachPortfolio = ({ portfolio }) => {
-  const { name, company, imageUrl, price, percentage } = portfolio;
+  const { code, name, currentPrice, fluctuationRate } = portfolio;
   return (
     <St.EachPortfolioContainer>
       <St.FlexedColumnContainer>
-        <St.Name>{name}</St.Name>
-        <St.Company>{company}</St.Company>
+        <St.Name>{code}</St.Name>
+        <St.Company>{name}</St.Company>
       </St.FlexedColumnContainer>
       <St.FlexedRowContainer>
         <St.GraphImg>
-          {percentage > 0 ? <img src={RedImage} alt="상승그래프" /> : <img src={BlueImage} alt="하강그래프" />}
+          {fluctuationRate > 0 ? <img src={RedImage} alt="상승그래프" /> : <img src={BlueImage} alt="하강그래프" />}
         </St.GraphImg>
         <St.FlexedColumnContainer align="right">
-          <St.Price>{price}</St.Price>
-          <St.Percentage percentage={percentage}>
-            {percentage > 0 ? (
+          <St.Price>{currentPrice}</St.Price>
+          <St.Percentage percentage={fluctuationRate}>
+            {fluctuationRate > 0 ? (
               <St.ArrowIcon src={UpSmallIcon} alt="상승화살표" />
             ) : (
               <St.ArrowIcon src={DownSmallIcon} alt="하강화살표" />
             )}
-            {Math.abs(percentage).toFixed(2)}%
+            {Math.abs(fluctuationRate).toFixed(2)}%
           </St.Percentage>
         </St.FlexedColumnContainer>
       </St.FlexedRowContainer>

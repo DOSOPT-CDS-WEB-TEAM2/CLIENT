@@ -1,9 +1,18 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import EachPortfolio from './EachPortfolio';
 import { SmallIcon } from '../../assets';
+import { FetchPortfolioData } from '../Api/FetchData';
 
 const MyPorfolio = () => {
+  const [portfolios, setPortfolios] = useState([]);
+  useEffect(() => {
+    getData();
+  }, []);
+  const getData = async () => {
+    const portfolioData = await FetchPortfolioData();
+    setPortfolios(portfolioData);
+  };
   const PORTFOLIO_DUMMY = [
     {
       id: 1,
@@ -31,10 +40,10 @@ const MyPorfolio = () => {
           추가
         </St.AddButton>
       </St.MyPortfolioHeader>
-      {PORTFOLIO_DUMMY.map((each, idx) => (
+      {portfolios.map((each, idx) => (
         <div key={idx}>
           <EachPortfolio key={idx} portfolio={each} />
-          {idx !== PORTFOLIO_DUMMY.length - 1 && <St.Line />}
+          {idx !== portfolios.length - 1 && <St.Line />}
         </div>
       ))}
     </St.MyPortfolioContainer>
