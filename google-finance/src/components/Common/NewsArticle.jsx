@@ -21,7 +21,7 @@ const NewsArticle = ({ article }) => {
       </St.ArticleWrapper>
       {imageUrl && (
         <St.ArticlePictureWrapper>
-          <img src={imageUrl} alt="뉴스기사-사진" />
+          <St.ArticleImg src={imageUrl} alt="뉴스기사-사진" />
         </St.ArticlePictureWrapper>
       )}
     </St.NewsArticleContainer>
@@ -67,5 +67,9 @@ const St = {
     align-items: center;
 
     margin-right: 1.5rem;
+  `,
+  ArticleImg: styled.img`
+    width: 8rem;
+    height: 8rem;
   `,
 };

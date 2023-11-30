@@ -11,7 +11,7 @@ export const FetchPortfolioData = async () => {
   }
 };
 
-export const FetchNewsData = async () => {
+export const FetchArticleData = async () => {
   try {
     const response = await API.get(`/news`);
     return response.data;
