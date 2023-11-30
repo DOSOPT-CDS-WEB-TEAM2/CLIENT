@@ -4,7 +4,7 @@ import NavCategory from './NavCategory';
 import NavHr from './NavHr';
 import { Link } from 'react-router-dom';
 import NavMyItem from './NavMyItem';
-import StockList from './ActiveStock/StockList';
+import ActiveStockContainer from './ActiveStock/ActiveStockContainer';
 import theme from '../../styles/theme';
 import {
   NavSettingIcon,
@@ -38,7 +38,7 @@ const NavBarContent = ({ onClose }) => {
       </St.NavHeader>
 
       <NavCategory icon={NavHomeIcon} text="홈" />
-      <Link to="/market">
+      <Link to="/market" onClick={handleClose}>
         <NavCategory icon={NavMenuBlackIcon} text="시장현황" />
       </Link>
 
@@ -49,10 +49,7 @@ const NavBarContent = ({ onClose }) => {
       ))}
       <NavHr marginBottom="1rem" left="-1.5rem" />
 
-      <St.NavApiContainers>
-        <St.NavTitle>가장 거래가 활발한 주식</St.NavTitle>
-        <StockList />
-      </St.NavApiContainers>
+      <ActiveStockContainer />
 
       <NavHr marginBottom="1rem" left="-1.5rem" />
       <NavCategory icon={NavSettingIcon} text="설정" />
