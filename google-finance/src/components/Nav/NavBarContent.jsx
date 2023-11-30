@@ -14,8 +14,6 @@ import {
   NavMenuBlackIcon,
   LogoImage,
   NavHomeIcon,
-  GraphRedImage,
-  ArrowUpIcon,
 } from '../../assets/index';
 
 const NavBarContent = ({ onClose }) => {
@@ -35,21 +33,20 @@ const NavBarContent = ({ onClose }) => {
           <NavCategory icon={NavMenuBlackIcon} text="시장현황" />
         </Link>
 
-        <NavHr marginBottom="2.4rem" />
+        <NavHr marginBottom="2.4rem" left="-1.5rem" />
 
         {ITEMS.map((item, index) => (
           <NavMyItem key={index} item={item} />
         ))}
-        <NavHr marginBottom="1rem" />
+        <NavHr marginBottom="1rem" left="-1.5rem" />
 
         <St.NavApiContainers>
           <St.NavTitle>가장 거래가 활발한 주식</St.NavTitle>
-          {STOCKS.map((stock, index) => (
-            <ActiveStock key={index} stockName={stock.name} fluctuationRate={stock.fluctuationRate} />
-          ))}
+
+          <ActiveStock />
         </St.NavApiContainers>
 
-        <NavHr marginBottom="1rem" />
+        <NavHr marginBottom="1rem" left="-1.5rem" />
         <NavCategory icon={NavSettingIcon} text="설정" />
         <NavCategory icon={NavChatIcon} text="의견보내기" />
       </St.ModalContentContainer>
