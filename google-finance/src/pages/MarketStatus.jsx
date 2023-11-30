@@ -17,11 +17,9 @@ const MarketStatus = () => {
       <HeaderIndex />
       <MarketCategory category={USA} />
 
-      <MarketHr />
       <MarketUSA />
 
       <MarketCategory category={MID_EAST_AFRICA} />
-      <MarketHr />
       <MarketTotal />
     </HomeContainer>
   );

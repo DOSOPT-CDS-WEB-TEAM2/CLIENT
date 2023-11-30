@@ -42,16 +42,22 @@ const MarketTotal = () => {
   return (
     <div>
       {renderContinentData('유럽')}
+      <St.Line />
       {renderContinentData('중동')}
+      <St.Line />
       {renderContinentData('아프리카')}
+      <St.Line />
     </div>
   );
 };
 
 const ContinentData = ({ data }) => (
   <div>
-    {data.map((item) => (
-      <MarketItem key={item.id} {...item} />
+    {data.map((item, index) => (
+      <React.Fragment key={item.id}>
+        <MarketItem {...item} />
+        {index !== data.length - 1 && <St.Line />}
+      </React.Fragment>
     ))}
   </div>
 );
@@ -100,8 +106,6 @@ const St = {
     ${(props) => props.theme.fonts.productsans_18_bold};
   `,
 
-  fluctiorate: styled.p``,
-
   TitleContainer: styled.span`
     display: flex;
     flex-direction: column;
@@ -115,6 +119,18 @@ const St = {
     flex-direction: column;
 
     width: 7rem;
+  `,
+  Line: styled.hr`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 93%;
+    height: 0.05rem;
+    margin: 0 auto;
+    border: 0;
+
+    background-color: #d5d5d5;
   `,
 };
 

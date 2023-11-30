@@ -36,8 +36,11 @@ const MarketUSA = () => {
 
   return (
     <div>
-      {usMarketData.map((item) => (
-        <MarketItem key={item.id} {...item} />
+      {usMarketData.map((item, index) => (
+        <React.Fragment key={item.id}>
+          <MarketItem {...item} />
+          {index !== usMarketData.length - 1 && <St.Line />}
+        </React.Fragment>
       ))}
     </div>
   );
@@ -74,6 +77,18 @@ const St = {
     margin-right: 3rem;
   `,
 
+  Line: styled.hr`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 93%;
+    height: 0.05rem;
+    margin: 0 auto;
+    border: 0;
+
+    background-color: #d5d5d5;
+  `,
   Title: styled.h1`
     ${(props) => props.theme.fonts.roboto_14_cond};
   `,

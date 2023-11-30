@@ -35,7 +35,6 @@ const St = {
 
     width: 100%;
     padding: 0.9rem 1.3rem;
-    border-bottom: solid 0.5rem ${(props) => props.theme.colors.gray_4};
   `,
   Title: styled.h1`
     margin-bottom: 1.5rem;
