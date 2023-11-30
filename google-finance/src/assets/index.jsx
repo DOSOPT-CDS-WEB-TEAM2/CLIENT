@@ -3,6 +3,7 @@ export { default as MenuIcon } from './icon/ic_menu.svg';
 export { default as SubMenuIcon } from './icon/ic_menu_dots.svg';
 export { default as SearchIcon } from './icon/ic_search.svg';
 export { default as SearchGrayIcon } from './icon/search.svg';
+export { default as UpsideDownIcon } from './icon/btn_arrow_upside_down.svg';
 export { default as FooterLogoImage } from './img/Google.svg';
 export { default as LineImage } from './img/LineImage.svg';
 
