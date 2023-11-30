@@ -1,13 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
-import { BtnRight } from '../../../assets';
+import { BtnRightIcon } from '../../../assets';
 import theme from '../../../styles/theme';
 
 const IndexInfo = () => {
   return (
     <St.Info>
       <span>홈</span>
-      <img src={BtnRight} />
+      <img src={BtnRightIcon} />
       <span>051910 · KRX</span>
     </St.Info>
   );

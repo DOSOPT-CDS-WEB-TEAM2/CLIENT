@@ -4,7 +4,29 @@ import theme from '../../styles/theme';
 export const CommonButtonContainer = styled.div`
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
+
   gap: 1rem;
+`;
+
+export const CommonRateButton = styled.button`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 7.7rem;
+  height: 2.5rem;
+  padding: 0.4rem 1rem;
+
+  border-radius: ${({ $hasOneIcon }) => ($hasOneIcon ? '50%' : '0.5rem')};
+  ${theme.fonts.productsans_14_bold};
+  background-color: ${theme.colors.red_background};
+  color: ${theme.colors.red_main};
+  border: none;
+
+  img {
+    margin: 0;
+  }
 `;
 
 export const CommonButton = styled.button`
@@ -14,7 +36,7 @@ export const CommonButton = styled.button`
 
   width: ${({ $hasOneIcon }) => ($hasOneIcon ? '3rem' : 'auto')};
   height: 3rem;
-  padding: ${({ $hasOneIcon }) => ($hasOneIcon ? '0' : '0.8rem 1.4rem')};
+  padding: ${({ $hasOneIcon }) => ($hasOneIcon ? '0' : '0.8rem 1.2rem')};
 
   gap: 0.4rem;
   border-radius: ${({ $hasOneIcon }) => ($hasOneIcon ? '50%' : '1.5rem')};

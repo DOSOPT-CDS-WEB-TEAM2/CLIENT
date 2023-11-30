@@ -62,6 +62,13 @@ const fonts = {
     font-weight: 400;
     line-height: normal;
   `,
+  productsans_18_bold: css`
+    font-family: 'Product Sans';
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  `,
   productsans_24: css`
     font-family: 'Product Sans';
     font-size: 2.4rem;
