@@ -5,6 +5,10 @@ export { default as SearchIcon } from './icon/ic_search.svg';
 export { default as FooterLogoImage } from './img/Google.svg';
 export { default as LineImage } from './img/LineImage.svg';
 
+export { default as RedImage } from './img/graph_red.svg';
+export { default as BlueImage } from './img/graph_blue.svg';
+export { default as SmallIcon } from './icon/ic_plus_small.svg';
+
 export { default as BtnRightIcon } from './icon/btn_right.svg';
 export { default as ShareIcon } from './icon/share.svg';
 export { default as CheckIcon } from './icon/ic_check.svg';

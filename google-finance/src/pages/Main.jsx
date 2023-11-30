@@ -1,11 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
+import MyPorfolio from '../components/Main/MyPorfolio';
 import NewsArticle from '../components/Common/NewsArticle';
 import { ARTICLE_DUMMY } from './../assets/data/ARTICLE_DUMMY';
 
 const Main = () => {
   return (
     <St.MainContainer>
+      <MyPorfolio />
       {ARTICLE_DUMMY.map((article, idx) => (
         <NewsArticle
           key={idx}
