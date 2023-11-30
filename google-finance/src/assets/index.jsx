@@ -25,3 +25,4 @@ export { default as GraphRed3xImage } from './img/graph_red3x.svg';
 export { default as ArrowUpIcon } from './icon/ic_arrow_up.svg';
 export { default as ArrowUpSmallIcon } from './icon/ic_arrow_up_small.svg';
 export { default as GraphImage } from './img/graphImage.svg';
+export { default as InOutComeGraphImage } from './img/inOutComeImage.svg';

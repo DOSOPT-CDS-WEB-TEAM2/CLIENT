@@ -2,11 +2,12 @@ import React from 'react';
 import styled from 'styled-components';
 import { CommonButton } from '../../Common/buttons';
 import theme from '../../../styles/theme';
+import { useState } from 'react';
 
-const Title = () => {
+const Title = ({ title }) => {
   return (
     <St.Container>
-      <span>LG화학</span>
+      <span>{title}</span>
       <CommonButton>8.70%</CommonButton>
       <CommonButton>410.000</CommonButton>
     </St.Container>
