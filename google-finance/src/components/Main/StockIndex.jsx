@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { PercentButton } from '../Common/PercentButton';
 const StockIndex = ({ stock }) => {
   const { name, currentStockIndex, fluctuationRate } = stock;
 
@@ -7,7 +8,7 @@ const StockIndex = ({ stock }) => {
     <St.StockIndexContainer>
       <St.StockName>{name}</St.StockName>
       <St.StockCurrentIndex>{currentStockIndex}</St.StockCurrentIndex>
-      {fluctuationRate}
+      <PercentButton isSmall={false} value={Math.abs(fluctuationRate) + '%'} />
     </St.StockIndexContainer>
   );
 };
