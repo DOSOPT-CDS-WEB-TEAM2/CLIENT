@@ -5,7 +5,7 @@ import { CommonRateButton } from '../../Common/buttons';
 
 const MarketUSA = ({ title, stockIndex, fluctuationRate }) => {
   return (
-    <St.Container>
+    <St.MarketUSAContainer>
       <St.TitleContainer>
         <St.Title>{title}</St.Title>
         <St.Category>지수</St.Category>
@@ -14,16 +14,16 @@ const MarketUSA = ({ title, stockIndex, fluctuationRate }) => {
       <St.RateSection>
         <St.StockIndex>{stockIndex}</St.StockIndex>
         <CommonRateButton>
-          <img src={ArrowUpSmallIcon} />
+          <img src={ArrowUpSmallIcon} alt="대륙별-지수-그래프" />
           {fluctuationRate}%
         </CommonRateButton>
       </St.RateSection>
-    </St.Container>
+    </St.MarketUSAContainer>
   );
 };
 
 const St = {
-  Container: styled.article`
+  MarketUSAContainer: styled.article`
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -48,8 +48,6 @@ const St = {
   StockIndex: styled.p`
     ${(props) => props.theme.fonts.productsans_18_bold};
   `,
-
-  fluctiorate: styled.p``,
 
   TitleContainer: styled.span`
     display: flex;
