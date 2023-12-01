@@ -13,9 +13,9 @@ const MarketTotal = () => {
   useEffect(() => {
     const fetchMarketStatus = async () => {
       try {
-        const DATA = await FetchMarketData();
-        console.log('Market USA Data:', DATA);
-        setMarketStatus(DATA);
+        const data = await FetchMarketData();
+        console.log('Market USA Data:', data);
+        setMarketStatus(data);
       } catch (error) {
         setError(error);
       }

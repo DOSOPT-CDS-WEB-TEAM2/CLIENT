@@ -12,9 +12,9 @@ const MarketUSA = () => {
   useEffect(() => {
     const fetchMarketStatus = async () => {
       try {
-        const DATA = await FetchMarketData();
-        console.log('Market USA Data:', DATA);
-        setMarketStatus(DATA);
+        const data = await FetchMarketData();
+        console.log('Market USA Data:', data);
+        setMarketStatus(data);
       } catch (error) {
         setError(error);
       }
@@ -87,7 +87,7 @@ const St = {
     margin: 0 auto;
     border: 0;
 
-    background-color: #d5d5d5;
+    background-color: ${(props) => props.theme.colors.gray_3};
   `,
   Title: styled.h1`
     ${(props) => props.theme.fonts.roboto_14_cond};
