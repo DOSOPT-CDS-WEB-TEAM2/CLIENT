@@ -10,12 +10,17 @@ const Main = () => {
   const NEWS_LIST = ['주요뉴스', '국내 주식 시장', '세계시장'];
   const [articles, setArticles] = useState([]);
   useEffect(() => {
+    const getData = async () => {
+      try {
+        const articleData = await FetchArticleData();
+        setArticles(articleData);
+      } catch (error) {
+        return <div>{error.message}</div>;
+      }
+    };
     getData();
   }, []);
-  const getData = async () => {
-    const articleData = await FetchArticleData();
-    setArticles(articleData);
-  };
+
   return (
     <St.MainContainer>
       {/* <CommonButtonContainer>
