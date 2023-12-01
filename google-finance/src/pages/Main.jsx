@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import MyPorfolio from '../components/Main/MyPorfolio';
 import NewsArticle from '../components/Common/NewsArticle';
-import { FetchArticleData } from '../components/Api/FetchData';
+import { FetchArticleData, FetchMarketData } from '../components/Api/FetchData';
 import { CommonButton, CommonButtonContainer } from './../components/Common/buttons';
 import { ARTICLE_DUMMY } from './../assets/data/ARTICLE_DUMMY';
 import Search from '../components/Main/Search';
@@ -14,11 +14,14 @@ const Main = () => {
   const CATEGORY_LIST = ['미국', '유럽', '아시아', '통화', '암호화폐', '선물'];
   const NEWS_LIST = ['주요뉴스', '국내 주식 시장', '세계시장'];
   const [articles, setArticles] = useState([]);
+  const [stocks, setStocks] = useState([]);
   useEffect(() => {
     const getData = async () => {
       try {
         const articleData = await FetchArticleData();
+        const stockData = await FetchMarketData();
         setArticles(articleData);
+        setStocks(stockData['아시아']);
       } catch (error) {
         return <div>{error.message}</div>;
       }
@@ -29,12 +32,12 @@ const Main = () => {
   return (
     <St.MainContainer>
       <CommonButtonContainer $needPadding={true}>
-        {CATEGORY_LIST.map((category) => (
-          <CommonButton>{category}</CommonButton>
+        {CATEGORY_LIST.map((category, idx) => (
+          <CommonButton key={idx}>{category}</CommonButton>
         ))}
       </CommonButtonContainer>
       <St.StockContainer>
-        {STOCKINFO_OBJECT_DUMMY.map((stock, idx) => (
+        {stocks.map((stock, idx) => (
           <StockIndex key={idx} stock={stock} />
         ))}
       </St.StockContainer>
