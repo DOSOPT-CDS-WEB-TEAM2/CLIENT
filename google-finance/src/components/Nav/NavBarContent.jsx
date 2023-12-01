@@ -18,6 +18,7 @@ import {
 const NavBarContent = ({ onClose }) => {
   const ITEMS = ['포트폴리오', '관심종목'];
   const [isOpen, setIsOpen] = useState(false);
+  const [isHomeActive, setIsHomeActive] = useState(false);
 
   useEffect(() => {
     setIsOpen(true);
@@ -39,7 +40,13 @@ const NavBarContent = ({ onClose }) => {
 
       <NavCategory icon={NavHomeIcon} text="홈" />
       <Link to="/market" onClick={handleClose}>
-        <NavCategory icon={NavMenuBlackIcon} text="시장현황" />
+        <NavCategory
+          icon={NavMenuBlackIcon}
+          text="시장현황"
+          onClick={() => {
+            setIsHomeActive(true);
+          }}
+        />
       </Link>
 
       <NavHr marginBottom="2.4rem" left="-1.5rem" />
