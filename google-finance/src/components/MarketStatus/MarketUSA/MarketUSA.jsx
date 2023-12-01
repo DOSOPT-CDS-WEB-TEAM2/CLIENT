@@ -49,7 +49,7 @@ const MarketItem = ({ name, currentStockIndex, fluctuationRate }) => {
   const isUp = fluctuationRate > 0;
 
   return (
-    <St.Container>
+    <St.MarketUSAContainer>
       <St.TitleContainer>
         <St.Title>{name}</St.Title>
         <St.Category>지수</St.Category>
@@ -59,11 +59,11 @@ const MarketItem = ({ name, currentStockIndex, fluctuationRate }) => {
         <St.StockIndex>{currentStockIndex}</St.StockIndex>
         <PercentButton isUp={isUp} isSmall={true} value={`${Math.abs(fluctuationRate)}%`} />
       </St.RateSection>
-    </St.Container>
+    </St.MarketUSAContainer>
   );
 };
 const St = {
-  Container: styled.article`
+  MarketUSAContainer: styled.article`
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -100,8 +100,6 @@ const St = {
   StockIndex: styled.p`
     ${(props) => props.theme.fonts.productsans_18_bold};
   `,
-
-  fluctiorate: styled.p``,
 
   TitleContainer: styled.span`
     display: flex;
