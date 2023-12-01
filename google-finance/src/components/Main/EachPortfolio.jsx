@@ -1,11 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
+import { useNavigate } from 'react-router-dom';
 import { RedImage, BlueImage, UpSmallIcon, DownSmallIcon } from '../../assets';
 
 const EachPortfolio = ({ portfolio }) => {
   const { code, name, currentPrice, fluctuationRate } = portfolio;
+  const navigate = useNavigate();
+  const onClick = (name) => {
+    name === 'LG화학' && navigate('/detail');
+  };
   return (
-    <St.EachPortfolioContainer>
+    <St.EachPortfolioContainer onClick={(e) => onClick(name, e)}>
       <St.FlexedColumnContainer>
         <St.Name>{code}</St.Name>
         <St.Company>{name}</St.Company>
@@ -37,8 +42,6 @@ const St = {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-
-    padding: 0 1.5rem;
   `,
   FlexedColumnContainer: styled.div`
     display: flex;
