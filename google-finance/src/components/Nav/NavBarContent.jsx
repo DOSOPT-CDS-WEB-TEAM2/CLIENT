@@ -32,7 +32,7 @@ const NavBarContent = ({ onClose }) => {
   };
 
   return (
-    <St.NavBarContentContainer isOpen={isOpen} onClick={(e) => e.stopPropagation()}>
+    <St.NavBarContentContainer isOpen={isOpen}>
       <St.NavHeader>
         <St.NavCloseBtn src={NavDeleteIcon} alt="메뉴-닫기-버튼" onClick={handleClose} />
         <img src={LogoImage} alt="구글금융-로고" />
