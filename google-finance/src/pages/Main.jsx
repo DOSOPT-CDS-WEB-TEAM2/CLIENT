@@ -33,13 +33,13 @@ const Main = () => {
           <CommonButton>{category}</CommonButton>
         ))}
       </CommonButtonContainer> */}
-      <Search />
-      <SubNav />
       <St.StockContainer>
         {STOCKINFO_OBJECT_DUMMY.map((stock, idx) => (
           <StockIndex key={idx} stock={stock} />
         ))}
       </St.StockContainer>
+      <Search />
+      <SubNav />
       <MyPorfolio />
       <St.NewsHeader>
         <St.Title>오늘의 금융 뉴스</St.Title>

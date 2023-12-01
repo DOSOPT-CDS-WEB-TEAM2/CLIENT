@@ -46,7 +46,7 @@ const St = {
     border-bottom: 0.3rem solid;
     border-color: ${({ theme }) => theme.colors.gray_4};
 
-    padding: 2rem 1.5rem 1.4rem;
+    padding: 2rem 1.4rem;
   `,
   MyPortfolioHeader: styled.header`
     display: flex;
@@ -69,7 +69,7 @@ const St = {
 
   Line: styled.hr`
     height: 0.05rem;
-    margin: 0;
+    margin: 0.7rem 0;
 
     border: 0;
     background-color: ${({ theme }) => theme.colors.gray_3};
