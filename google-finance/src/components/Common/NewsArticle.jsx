@@ -13,7 +13,7 @@ const NewsArticle = ({ article }) => {
   }, [createdAt]);
   return (
     <St.NewsArticleContainer>
-      <St.ArticleWrapper imageUrl={imageUrl}>
+      <St.ArticleWrapper $imageUrl={imageUrl}>
         <St.ArticleEtcInfo>
           {publisher} | {hourGap}시간 전
         </St.ArticleEtcInfo>
@@ -47,10 +47,10 @@ const St = {
     flex-direction: column;
     flex-shrink: 0;
 
-    width: ${({ imageUrl }) => (imageUrl !== null ? '29rem' : '37.5rem')};
+    width: ${({ $imageUrl }) => ($imageUrl !== null ? '29rem' : '37.5rem')};
     height: 9.9rem;
 
-    padding: ${({ imageUrl }) => (imageUrl !== null ? '1rem 1rem 0.9rem 1.6rem' : '1rem 1.4rem 0.9rem 1.6rem')};
+    padding: ${({ $imageUrl }) => ($imageUrl !== null ? '1rem 1rem 0.9rem 1.6rem' : '1rem 1.4rem 0.9rem 1.6rem')};
     gap: 1rem;
   `,
   ArticleTitle: styled.div`
