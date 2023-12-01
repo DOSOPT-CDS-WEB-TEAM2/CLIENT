@@ -28,11 +28,11 @@ const Main = () => {
 
   return (
     <St.MainContainer>
-      {/* <CommonButtonContainer>
+      <CommonButtonContainer $needPadding={true}>
         {CATEGORY_LIST.map((category) => (
           <CommonButton>{category}</CommonButton>
         ))}
-      </CommonButtonContainer> */}
+      </CommonButtonContainer>
       <St.StockContainer>
         {STOCKINFO_OBJECT_DUMMY.map((stock, idx) => (
           <StockIndex key={idx} stock={stock} />

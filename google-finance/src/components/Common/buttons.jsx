@@ -8,6 +8,8 @@ export const CommonButtonContainer = styled.div`
 
   gap: 1rem;
 
+  padding: ${({ $needPadding }) => $needPadding && '0.4rem 0 1.5rem 1rem'};
+
   white-space: ${({ $isSub }) => $isSub && 'nowrap'};
   overflow-x: ${({ $isSub }) => $isSub && 'scroll'};
   overflow-y: ${({ $isSub }) => $isSub && 'hidden'};
