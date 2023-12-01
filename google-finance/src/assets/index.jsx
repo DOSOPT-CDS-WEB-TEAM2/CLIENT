@@ -11,10 +11,6 @@ export { default as RedImage } from './img/graph_red.svg';
 export { default as BlueImage } from './img/graph_blue.svg';
 export { default as SmallIcon } from './icon/ic_plus_small.svg';
 
-export { default as RedImage } from './img/graph_red.svg';
-export { default as BlueImage } from './img/graph_blue.svg';
-export { default as SmallIcon } from './icon/ic_plus_small.svg';
-
 export { default as ShareIcon } from './icon/share.svg';
 export { default as CheckIcon } from './icon/ic_check.svg';
 export { default as UpSmallIcon } from './icon/arrow.up_small.svg';
@@ -36,5 +32,3 @@ export { default as ArrowUpSmallIcon } from './icon/ic_arrow_up_small.svg';
 export { default as GraphImage } from './img/graphImage.svg';
 export { default as InOutComeGraphImage } from './img/inOutComeImage.svg';
 export { default as BtnRightIcon } from './icon/btn_right_mar.svg';
-
-export { default as GraphImage } from './img/graphImage.svg';
