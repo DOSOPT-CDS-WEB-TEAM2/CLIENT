@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import CompareGraph from './InOutComeGraph';
 import { useEffect } from 'react';
-import axios from 'axios';
+import { FetchInOutComeData } from '../Api/fetchDetailData';
 
 const InOutComeInfo = () => {
   const [inOutComeData, setInOutComeData] = useState({
@@ -22,25 +22,21 @@ const InOutComeInfo = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`${import.meta.env.VITE_BASE_URL}/income-statement/051910`, {
-          headers: {
-            'Content-Type': 'application/json',
-          },
-        });
+        const response = await FetchInOutComeData();
         setInOutComeData({
           ...inOutComeData,
-          income: response.data.income,
-          comparedIncome: response.data.comparedIncome,
-          profitMargin: response.data.profitMargin,
-          comparedProfitMargin: response.data.comparedProfitMargin,
-          operatingExpenses: response.data.operatingExpenses,
-          comparedOperatingExpenses: response.data.comparedOperatingExpenses,
-          incomePerShare: response.data.incomePerShare,
-          comparedIncomePerShare: response.data.comparedIncomePerShare,
-          ebitda: response.data.ebitda,
-          comparedEbitda: response.data.comparedEbitda,
-          effectiveTaxRate: response.data.effectiveTaxRate,
-          comparedEffectiveTaxRate: response.data.comparedEffectiveTaxRate,
+          income: response.income,
+          comparedIncome: response.comparedIncome,
+          profitMargin: response.profitMargin,
+          comparedProfitMargin: response.comparedProfitMargin,
+          operatingExpenses: response.operatingExpenses,
+          comparedOperatingExpenses: response.comparedOperatingExpenses,
+          incomePerShare: response.incomePerShare,
+          comparedIncomePerShare: response.comparedIncomePerShare,
+          ebitda: response.ebitda,
+          comparedEbitda: response.comparedEbitda,
+          effectiveTaxRate: response.effectiveTaxRate,
+          comparedEffectiveTaxRate: response.comparedEffectiveTaxRate,
         });
       } catch (error) {
         console.error('에러:', error);

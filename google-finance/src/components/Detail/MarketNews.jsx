@@ -3,6 +3,7 @@ import NewsArticle from '../Common/NewsArticle';
 import SubHeader from './SubHeader';
 import axios from 'axios';
 import styled from 'styled-components';
+import { FetchNewsData } from './Api/fetchDetailData';
 
 const MarketNews = () => {
   const [newsData, setNewsData] = useState([]);
@@ -10,15 +11,8 @@ const MarketNews = () => {
   useEffect(() => {
     const fetchNewsData = async () => {
       try {
-        const response = await axios.get(`${import.meta.env.VITE_BASE_URL}/news`, {
-          params: {
-            related_stock: '051910',
-          },
-          headers: {
-            'Content-Type': 'application/json',
-          },
-        });
-        setNewsData(response.data);
+        const response = await FetchNewsData();
+        setNewsData(response);
       } catch (error) {
         console.error('에러:', error);
       }
