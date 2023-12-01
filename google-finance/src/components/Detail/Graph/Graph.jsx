@@ -3,6 +3,8 @@ import GraphButton from './GraphButton';
 import InfoGraph from './InfoGraph';
 import InfoText from './InfoText';
 import { GraphImage } from '../../../assets';
+import styled from 'styled-components';
+import theme from '../../../styles/theme';
 
 const Graph = ({
   previousDayIncrease,
@@ -19,6 +21,7 @@ const Graph = ({
     <>
       <GraphButton DATA_ARR={['1일', '5일', '1개월', '6개월', 'YTD', '1년']} />
       <InfoGraph GraphImage={GraphImage} />
+      <St.NavHr />
       <InfoText
         previousDayIncrease={previousDayIncrease}
         todayLowestPrice={todayLowestPrice}
@@ -32,6 +35,17 @@ const Graph = ({
       />
     </>
   );
+};
+const St = {
+  NavHr: styled.hr`
+    position: relative;
+
+    width: 100%;
+    margin: 0;
+
+    border: none;
+    border-top: 0.05rem solid ${theme.colors.gray_3};
+  `,
 };
 
 export default Graph;

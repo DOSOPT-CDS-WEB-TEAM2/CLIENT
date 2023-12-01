@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import NewsArticle from '../Common/NewsArticle';
 import SubHeader from './SubHeader';
 import axios from 'axios';
+import styled from 'styled-components';
 
 const MarketNews = () => {
   const [newsData, setNewsData] = useState([]);

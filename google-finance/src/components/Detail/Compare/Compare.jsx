@@ -33,6 +33,7 @@ const Compare = () => {
       {compareData.slice(0, 5).map((each, idx) => (
         <div key={idx}>
           <EachPortfolio key={idx} portfolio={each} />
+          {idx !== 4 && <St.Line />}
         </div>
       ))}
       <CompareIndexContainer>
@@ -43,8 +44,29 @@ const Compare = () => {
           </div>
         ))}
       </CompareIndexContainer>
+      <St.Line2 />
     </>
   );
 };
 
 export default Compare;
+
+const St = {
+  Line: styled.hr`
+    width: 34.5rem;
+    height: 0.05rem;
+    padding: 0 1.5rem;
+
+    border: 0;
+    background-color: ${({ theme }) => theme.colors.gray_3};
+  `,
+  Line2: styled.hr`
+    width: 100%;
+    height: 0.3rem;
+    margin-top: 1.6rem;
+    margin-bottom: 0;
+
+    border: 0.3rem;
+    background-color: ${({ theme }) => theme.colors.gray_4};
+  `,
+};
