@@ -23,6 +23,8 @@ const St = {
     border-bottom: 0.05rem solid ${theme.colors.gray_3};
 
     .category {
+      display: flex;
+      align-items: flex-start;
       ${theme.fonts.roboto_12}
       color: ${theme.colors.gray_2}
     }

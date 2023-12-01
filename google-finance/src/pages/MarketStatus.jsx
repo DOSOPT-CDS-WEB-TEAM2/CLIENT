@@ -11,7 +11,6 @@ const USA = '미주';
 const MID_EAST_AFRICA = '유럽, 중동, 아프리카';
 
 const MarketStatus = () => {
-  const MARKET = MARKET_STATUS_USA;
   return (
     <HomeContainer>
       <HeaderIndex />

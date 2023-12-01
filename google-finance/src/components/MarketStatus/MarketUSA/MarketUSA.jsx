@@ -12,9 +12,9 @@ const MarketUSA = () => {
   useEffect(() => {
     const fetchMarketStatus = async () => {
       try {
-        const DATA = await FetchMarketData();
-        console.log('Market USA Data:', DATA);
-        setMarketStatus(DATA);
+        const data = await FetchMarketData();
+        console.log('Market USA Data:', data);
+        setMarketStatus(data);
       } catch (error) {
         setError(error);
       }
@@ -49,7 +49,7 @@ const MarketItem = ({ name, currentStockIndex, fluctuationRate }) => {
   const isUp = fluctuationRate > 0;
 
   return (
-    <St.Container>
+    <St.MarketUSAContainer>
       <St.TitleContainer>
         <St.Title>{name}</St.Title>
         <St.Category>지수</St.Category>
@@ -59,11 +59,11 @@ const MarketItem = ({ name, currentStockIndex, fluctuationRate }) => {
         <St.StockIndex>{currentStockIndex}</St.StockIndex>
         <PercentButton isUp={isUp} isSmall={true} value={`${Math.abs(fluctuationRate)}%`} />
       </St.RateSection>
-    </St.Container>
+    </St.MarketUSAContainer>
   );
 };
 const St = {
-  Container: styled.article`
+  MarketUSAContainer: styled.article`
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -87,7 +87,7 @@ const St = {
     margin: 0 auto;
     border: 0;
 
-    background-color: #d5d5d5;
+    background-color: ${(props) => props.theme.colors.gray_3};
   `,
   Title: styled.h1`
     ${(props) => props.theme.fonts.roboto_14_cond};
@@ -100,8 +100,6 @@ const St = {
   StockIndex: styled.p`
     ${(props) => props.theme.fonts.productsans_18_bold};
   `,
-
-  fluctiorate: styled.p``,
 
   TitleContainer: styled.span`
     display: flex;
