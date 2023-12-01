@@ -4,9 +4,21 @@ import theme from '../../styles/theme';
 export const CommonButtonContainer = styled.div`
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: ${({ $isSub }) => !$isSub && 'wrap'};
 
   gap: 1rem;
+
+  white-space: ${({ $isSub }) => $isSub && 'nowrap'};
+  overflow-x: ${({ $isSub }) => $isSub && 'scroll'};
+  overflow-y: ${({ $isSub }) => $isSub && 'hidden'};
+  /* IE and Edge */
+  -ms-overflow-style: none;
+  /* Firefox */
+  scrollbar-width: none;
+  /* Chrome , Safari , Opera */
+  &::-webkit-scrollbar {
+    display: none;
+  }
 `;
 
 export const CommonRateButton = styled.button`
