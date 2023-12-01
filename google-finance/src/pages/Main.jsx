@@ -27,8 +27,8 @@ const Main = () => {
       <St.NewsHeader>
         <St.Title>오늘의 금융 뉴스</St.Title>
         <CommonButtonContainer>
-          {NEWS_LIST.map((news) => (
-            <CommonButton>{news}</CommonButton>
+          {NEWS_LIST.map((news, idx) => (
+            <CommonButton key={idx}>{news}</CommonButton>
           ))}
         </CommonButtonContainer>
       </St.NewsHeader>
