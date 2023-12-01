@@ -23,6 +23,7 @@ const St = {
     height: 4.8rem;
     margin-top: 2rem;
     padding-left: 1.5rem;
+    border-bottom: 0.05rem solid ${theme.colors.gray_3};
 
     color: ${theme.colors.blue_main};
     ${theme.fonts.roboto_18};

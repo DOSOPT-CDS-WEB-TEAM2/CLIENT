@@ -38,7 +38,7 @@ const St = {
     flex-direction: row;
     justify-content: space-between;
 
-    padding: 1rem 0;
+    padding: 0 1.5rem;
   `,
   FlexedColumnContainer: styled.div`
     display: flex;

@@ -2,6 +2,8 @@ export { default as LogoImage } from './img/image_logo.svg';
 export { default as MenuIcon } from './icon/ic_menu.svg';
 export { default as SubMenuIcon } from './icon/ic_menu_dots.svg';
 export { default as SearchIcon } from './icon/ic_search.svg';
+export { default as SearchGrayIcon } from './icon/search.svg';
+export { default as UpsideDownIcon } from './icon/btn_arrow_upside_down.svg';
 export { default as FooterLogoImage } from './img/Google.svg';
 export { default as LineImage } from './img/LineImage.svg';
 
@@ -9,7 +11,6 @@ export { default as RedImage } from './img/graph_red.svg';
 export { default as BlueImage } from './img/graph_blue.svg';
 export { default as SmallIcon } from './icon/ic_plus_small.svg';
 
-export { default as BtnRightIcon } from './icon/btn_right.svg';
 export { default as ShareIcon } from './icon/share.svg';
 export { default as CheckIcon } from './icon/ic_check.svg';
 export { default as UpSmallIcon } from './icon/arrow.up_small.svg';
@@ -30,3 +31,4 @@ export { default as ArrowUpIcon } from './icon/ic_arrow_up.svg';
 export { default as ArrowUpSmallIcon } from './icon/ic_arrow_up_small.svg';
 export { default as GraphImage } from './img/graphImage.svg';
 export { default as InOutComeGraphImage } from './img/inOutComeImage.svg';
+export { default as BtnRightIcon } from './icon/btn_right_mar.svg';

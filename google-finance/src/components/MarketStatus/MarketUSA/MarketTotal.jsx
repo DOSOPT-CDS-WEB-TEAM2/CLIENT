@@ -3,9 +3,10 @@ import { GraphRed3xImage, ArrowUpSmallIcon } from '../../../assets';
 import styled from 'styled-components';
 import { FetchMarketData } from '../../Api/FetchData';
 import { PercentButton } from '../../Common/PercentButton';
+import { CommonRateButton } from '../../Common/buttons';
 import theme from '../../../styles/theme';
 
-const MarketUSA = () => {
+const MarketTotal = () => {
   const [marketStatus, setMarketStatus] = useState(null);
   const [error, setError] = useState(null);
 
@@ -31,25 +32,41 @@ const MarketUSA = () => {
     return <div>Loading...</div>;
   }
 
-  // "미국"에 해당하는 부분을 추출
-  const usMarketData = marketStatus?.미국;
+  const continents = Object.entries(marketStatus);
+
+  const renderContinentData = (continent) => {
+    const continentData = continents.find(([c]) => c === continent);
+    return continentData && <ContinentData data={continentData[1]} />;
+  };
 
   return (
     <div>
-      {usMarketData.map((item, index) => (
-        <React.Fragment key={item.id}>
-          <MarketItem {...item} />
-          {index !== usMarketData.length - 1 && <St.Line />}
-        </React.Fragment>
-      ))}
+      {renderContinentData('유럽')}
+      <St.Line />
+      {renderContinentData('중동')}
+      <St.Line />
+      {renderContinentData('아프리카')}
+      <St.Line />
     </div>
   );
 };
+
+const ContinentData = ({ data }) => (
+  <div>
+    {data.map((item, index) => (
+      <React.Fragment key={item.id}>
+        <MarketItem {...item} />
+        {index !== data.length - 1 && <St.Line />}
+      </React.Fragment>
+    ))}
+  </div>
+);
+
 const MarketItem = ({ name, currentStockIndex, fluctuationRate }) => {
   const isUp = fluctuationRate > 0;
 
   return (
-    <St.MarketUSAContainer>
+    <St.Container>
       <St.TitleContainer>
         <St.Title>{name}</St.Title>
         <St.Category>지수</St.Category>
@@ -59,11 +76,11 @@ const MarketItem = ({ name, currentStockIndex, fluctuationRate }) => {
         <St.StockIndex>{currentStockIndex}</St.StockIndex>
         <PercentButton isUp={isUp} isSmall={true} value={`${Math.abs(fluctuationRate)}%`} />
       </St.RateSection>
-    </St.MarketUSAContainer>
+    </St.Container>
   );
 };
 const St = {
-  MarketUSAContainer: styled.article`
+  Container: styled.article`
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -77,18 +94,6 @@ const St = {
     margin-right: 3rem;
   `,
 
-  Line: styled.hr`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    width: 93%;
-    height: 0.05rem;
-    margin: 0 auto;
-    border: 0;
-
-    background-color: ${(props) => props.theme.colors.gray_3};
-  `,
   Title: styled.h1`
     ${(props) => props.theme.fonts.roboto_14_cond};
   `,
@@ -115,6 +120,18 @@ const St = {
 
     width: 7rem;
   `,
+  Line: styled.hr`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 93%;
+    height: 0.05rem;
+    margin: 0 auto;
+    border: 0;
+
+    background-color: #d5d5d5;
+  `,
 };
 
-export default MarketUSA;
+export default MarketTotal;
