@@ -3,7 +3,7 @@ import Title from './Title';
 import Price from './Price';
 import MainGraph from '../Graph/MainGraph';
 import { useEffect } from 'react';
-import axios from 'axios';
+import { FetchDetailMainData } from '../Api/fetchDetailData';
 
 const MainInfo = () => {
   const [stockData, setStockData] = useState({
@@ -24,20 +24,15 @@ const MainInfo = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`${import.meta.env.VITE_BASE_URL}/stock/051910`, {
-          headers: {
-            'Content-Type': 'application/json',
-          },
-        });
+        const response = await FetchDetailMainData();
         setStockData((prevData) => ({
           ...prevData,
-          ...response.data,
+          ...response,
         }));
       } catch (error) {
         console.error('에러:', error);
       }
     };
-
     fetchData();
   }, []);
   return (

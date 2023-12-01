@@ -23,3 +23,13 @@ export const FetchInOutComeData = async () => {
     throw error;
   }
 };
+
+export const FetchDetailMainData = async () => {
+  try {
+    const response = await API.get(`/stock/051910`);
+    return response.data;
+  } catch (error) {
+    console.error('에러:', error);
+    throw error;
+  }
+};

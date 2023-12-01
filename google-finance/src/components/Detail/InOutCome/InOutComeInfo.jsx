@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import CompareGraph from './InOutComeGraph';
 import { useEffect } from 'react';
-import axios from 'axios';
 import { FetchInOutComeData } from '../Api/fetchDetailData';
-import { API } from '../Api/Api';
 
 const InOutComeInfo = () => {
   const [inOutComeData, setInOutComeData] = useState({
