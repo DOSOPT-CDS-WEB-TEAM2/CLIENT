@@ -16,14 +16,13 @@ const St = {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: relative;
 
     width: 100%;
     height: 4.8rem;
 
     padding: 0.9rem 1.3rem;
     border-bottom: solid 0.2rem ${(props) => props.theme.colors.gray_4};
-
+    border-top: solid 0.5rem ${(props) => props.theme.colors.gray_4};
     img {
       width: 2.4rem;
     }
