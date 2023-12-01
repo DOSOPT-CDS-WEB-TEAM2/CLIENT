@@ -11,7 +11,10 @@ const Header = () => {
       <St.NavbarContainer>
         <img src={MenuIcon} alt="구글금융-메뉴" className="menu-icon" onClick={() => setIsOpen(true)} />
         {isOpen && <NavBar onClose={() => setIsOpen(false)} />}
-        <img src={LogoImage} alt="구글금융-로고" className="logo-image" />
+        <Link to={'/'}>
+          <img src={LogoImage} alt="구글금융-로고" className="logo-image" />
+        </Link>
+
         <img src={SearchIcon} alt="구글금융-검색" className="search-icon" />
         <img src={SubMenuIcon} alt="구글금융-세부메뉴" className="submenu-icon" />
         <St.NavBarButton type="button">

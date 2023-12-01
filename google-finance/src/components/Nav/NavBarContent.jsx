@@ -38,7 +38,10 @@ const NavBarContent = ({ onClose }) => {
         <img src={LogoImage} alt="구글금융-로고" />
       </St.NavHeader>
 
-      <NavCategory icon={NavHomeIcon} text="홈" />
+      <Link to="/" onClick={handleClose}>
+        <NavCategory icon={NavHomeIcon} text="홈" />
+      </Link>
+
       <Link to="/market" onClick={handleClose}>
         <NavCategory
           icon={NavMenuBlackIcon}
