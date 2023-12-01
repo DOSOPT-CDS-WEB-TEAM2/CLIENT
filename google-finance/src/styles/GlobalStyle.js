@@ -7,6 +7,7 @@ ${reset}
     width:100%;
     height: 100vh;
     margin: 0 auto;
+    -webkit-tap-highlight-color :rgba(0,0,0,0);
 }
 html {
     font-size: 62.5%;

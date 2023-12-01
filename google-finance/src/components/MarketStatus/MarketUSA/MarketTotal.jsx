@@ -130,7 +130,7 @@ const St = {
     margin: 0 auto;
     border: 0;
 
-    background-color: #d5d5d5;
+    background-color: ${(props) => props.theme.colors.gray_3};
   `,
 };
 

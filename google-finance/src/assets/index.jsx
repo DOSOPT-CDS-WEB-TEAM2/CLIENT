@@ -32,3 +32,5 @@ export { default as ArrowUpSmallIcon } from './icon/ic_arrow_up_small.svg';
 export { default as GraphImage } from './img/graphImage.svg';
 export { default as InOutComeGraphImage } from './img/inOutComeImage.svg';
 export { default as BtnRightIcon } from './icon/btn_right_mar.svg';
+
+export { default as BlueSearchIcon } from './icon/ic_menu_search_blue.svg';

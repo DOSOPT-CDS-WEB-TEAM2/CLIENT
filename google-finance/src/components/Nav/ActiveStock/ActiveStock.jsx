@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
-import theme from '../../styles/theme';
-import { GraphRedImage, ArrowUpSmallIcon } from '../../assets/index';
-import { CommonRateButton } from '../Common/buttons';
+import theme from '../../../styles/theme';
+import { FetchStocks } from '../../Api/FetchData';
+import { GraphRedImage, ArrowUpSmallIcon } from '../../../assets/index';
+import { CommonRateButton } from '../../Common/buttons';
+
 const ActiveStock = ({ stockName, fluctuationRate }) => {
   return (
     <St.NavApi>
@@ -10,7 +12,7 @@ const ActiveStock = ({ stockName, fluctuationRate }) => {
         <span>{stockName}</span>
         <img src={GraphRedImage} alt="그래프" />
         <CommonRateButton>
-          <img src={ArrowUpSmallIcon} />
+          <img src={ArrowUpSmallIcon} alt="화살표" />
           {parseFloat(fluctuationRate).toFixed(2)}%
         </CommonRateButton>
       </St.NavApiContainer>
@@ -27,7 +29,7 @@ const St = {
 
     span {
       color: ${(props) => props.theme.colors.gray_1};
-      ${theme.fonts.roboto_12};
+      ${theme.fonts.roboto_12_cond};
       width: 8.6rem;
     }
     img {
