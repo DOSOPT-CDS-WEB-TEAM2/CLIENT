@@ -6,21 +6,15 @@ import axios from 'axios';
 import styled from 'styled-components';
 import CompareIndexContainer from './CompareIndexContainer';
 import CompareIndex from './CompareIndex';
+import { FetchCompareData } from '../Api/fetchDetailData';
 
 const Compare = () => {
   const [compareData, setCompareData] = useState([]);
   useEffect(() => {
     const fetchCompareData = async () => {
       try {
-        const response = await axios.get(`${import.meta.env.VITE_BASE_URL}/stock`, {
-          params: {
-            type: 'chemistry',
-          },
-          headers: {
-            'Content-Type': 'application/json',
-          },
-        });
-        setCompareData(response.data);
+        const response = await FetchCompareData();
+        setCompareData(response);
       } catch (error) {
         console.error('에러:', error);
       }
