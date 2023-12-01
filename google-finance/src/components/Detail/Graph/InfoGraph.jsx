@@ -1,8 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import { GraphImage } from '../../../assets';
 
-const InfoGraph = () => {
+const InfoGraph = ({ GraphImage }) => {
   return (
     <St.Container>
       <img src={GraphImage} alt="LG화학그래프" />

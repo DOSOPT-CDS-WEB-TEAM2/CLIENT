@@ -2,17 +2,17 @@ import React from 'react';
 import styled from 'styled-components';
 import theme from '../../styles/theme';
 import { GraphRedImage, ArrowUpSmallIcon } from '../../assets/index';
-
+import { CommonRateButton } from '../Common/buttons';
 const ActiveStock = ({ stockName, fluctuationRate }) => {
   return (
     <St.NavApi>
       <St.NavApiContainer>
         <span>{stockName}</span>
         <img src={GraphRedImage} alt="그래프" />
-        <St.CommonButton>
+        <CommonRateButton>
           <img src={ArrowUpSmallIcon} />
           {parseFloat(fluctuationRate).toFixed(2)}%
-        </St.CommonButton>
+        </CommonRateButton>
       </St.NavApiContainer>
     </St.NavApi>
   );
@@ -32,26 +32,6 @@ const St = {
     }
     img {
       margin-right: 0.4rem;
-    }
-  `,
-
-  CommonButton: styled.button`
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    width: 7.7rem;
-    height: 2.5rem;
-    padding: 0.4rem 1rem;
-
-    border-radius: ${({ $hasOneIcon }) => ($hasOneIcon ? '50%' : '0.5rem')};
-    ${theme.fonts.productsans_14_bold};
-    background-color: ${theme.colors.red_background};
-    color: ${theme.colors.red_main};
-    border: none;
-
-    img {
-      margin: 0;
     }
   `,
 

@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import MyPorfolio from '../components/Main/MyPorfolio';
 import NewsArticle from '../components/Common/NewsArticle';
 import { ARTICLE_DUMMY } from './../assets/data/ARTICLE_DUMMY';
 import { STOCKINFO_OBJECT_DUMMY } from '../assets/data/STOCKINFO_OBJECT_DUMMY';
@@ -12,7 +13,7 @@ const Main = () => {
           <StockIndex key={idx} stock={stock} />
         ))}
       </St.StockContainer>
-
+      <MyPorfolio />
       {ARTICLE_DUMMY.map((article, idx) => (
         <NewsArticle
           key={idx}
