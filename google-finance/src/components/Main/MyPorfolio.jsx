@@ -7,30 +7,17 @@ import { FetchPortfolioData } from '../Api/FetchData';
 const MyPorfolio = () => {
   const [portfolios, setPortfolios] = useState([]);
   useEffect(() => {
+    const getData = async () => {
+      try {
+        const portfolioData = await FetchPortfolioData();
+        setPortfolios(portfolioData);
+      } catch (error) {
+        return <div>{error.message}</div>;
+      }
+    };
     getData();
   }, []);
-  const getData = async () => {
-    const portfolioData = await FetchPortfolioData();
-    setPortfolios(portfolioData);
-  };
-  const PORTFOLIO_DUMMY = [
-    {
-      id: 1,
-      name: '051910',
-      company: 'LG화학',
-      imgUrl: null,
-      price: '\\512,000.00',
-      percentage: 8.7,
-    },
-    {
-      id: 2,
-      name: 'APPL',
-      company: '애플',
-      imgUrl: null,
-      price: '$182.41',
-      percentage: -0.26,
-    },
-  ];
+
   return (
     <St.MyPortfolioContainer>
       <St.MyPortfolioHeader>
