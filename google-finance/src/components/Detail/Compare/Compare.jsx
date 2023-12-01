@@ -21,7 +21,7 @@ const Compare = () => {
     fetchCompareData();
   }, []);
   return (
-    <>
+    <St.CompareContainer>
       <CompareHeader />
       {compareData.slice(0, 5).map((each, idx) => (
         <div key={idx}>
@@ -38,13 +38,17 @@ const Compare = () => {
         ))}
       </CompareIndexContainer>
       <St.Line2 />
-    </>
+    </St.CompareContainer>
   );
 };
 
 export default Compare;
 
 const St = {
+  CompareContainer: styled.article`
+    padding: 0 1.5rem;
+  `,
+
   Line: styled.hr`
     width: 34.5rem;
     height: 0.05rem;
