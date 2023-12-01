@@ -1,14 +1,22 @@
 import React from 'react';
 import styled from 'styled-components';
 import theme from '../../../styles/theme';
-import { CommonButton } from '../../Common/buttons';
+import { PercentButton } from '../../Common/PercentButton';
 
 const InfoEach2 = ({ category, value, change }) => {
   return (
     <St.Container>
       <St.Category>{category}</St.Category>
       <St.Value>{value}</St.Value>
-      <St.Change>{change !== '전년대비 변동' ? <CommonButton>{change}</CommonButton> : change}</St.Change>
+      <St.Change>
+        {change !== '전년대비 변동' ? (
+          <PercentButton isSmall={true} isUp={true} value={'8.70%'}>
+            {change}
+          </PercentButton>
+        ) : (
+          change
+        )}
+      </St.Change>
     </St.Container>
   );
 };

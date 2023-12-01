@@ -67,5 +67,10 @@ const St = {
     align-items: center;
 
     margin-right: 1.5rem;
+
+    img {
+      width: 8rem;
+      height: 8rem;
+    }
   `,
 };
