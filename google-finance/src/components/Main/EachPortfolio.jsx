@@ -1,9 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { RedImage } from '../../assets';
-import { BlueImage } from '../../assets';
-import { UpSmallIcon } from '../../assets';
-import { DownSmallIcon } from '../../assets';
+import { RedImage, BlueImage, UpSmallIcon, DownSmallIcon } from '../../assets';
 
 const EachPortfolio = ({ portfolio }) => {
   const { code, name, currentPrice, fluctuationRate } = portfolio;
@@ -17,9 +14,9 @@ const EachPortfolio = ({ portfolio }) => {
         <St.GraphImg>
           {fluctuationRate > 0 ? <img src={RedImage} alt="상승그래프" /> : <img src={BlueImage} alt="하강그래프" />}
         </St.GraphImg>
-        <St.FlexedColumnContainer align="right">
+        <St.FlexedColumnContainer $align="right">
           <St.Price>{currentPrice}</St.Price>
-          <St.Percentage percentage={fluctuationRate}>
+          <St.Percentage $percentage={fluctuationRate}>
             {fluctuationRate > 0 ? (
               <St.ArrowIcon src={UpSmallIcon} alt="상승화살표" />
             ) : (
@@ -46,7 +43,7 @@ const St = {
   FlexedColumnContainer: styled.div`
     display: flex;
     flex-direction: column;
-    align-items: ${({ align }) => align && 'flex-end'};
+    align-items: ${({ $align }) => $align && 'flex-end'};
 
     width: ${({ align }) => align && '9rem'};
   `,
@@ -83,9 +80,9 @@ const St = {
     border-radius: 0.5rem;
     ${({ theme }) => theme.fonts.productsans_14_bold};
 
-    color: ${({ theme, percentage }) => (percentage > 0 ? theme.colors.red_main : theme.colors.blue_main)};
-    background-color: ${({ theme, percentage }) =>
-      percentage > 0 ? theme.colors.red_background : theme.colors.blue_background};
+    color: ${({ theme, $percentage }) => ($percentage > 0 ? theme.colors.red_main : theme.colors.blue_main)};
+    background-color: ${({ theme, $percentage }) =>
+      $percentage > 0 ? theme.colors.red_background : theme.colors.blue_background};
   `,
   GraphImg: styled.div`
     padding: 1rem;
