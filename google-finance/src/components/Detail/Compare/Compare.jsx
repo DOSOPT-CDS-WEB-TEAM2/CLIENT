@@ -2,7 +2,6 @@ import React from 'react';
 import CompareHeader from './CompareHeader';
 import EachPortfolio from '../../Main/EachPortfolio';
 import { useState, useEffect } from 'react';
-import axios from 'axios';
 import styled from 'styled-components';
 import CompareIndexContainer from './CompareIndexContainer';
 import CompareIndex from './CompareIndex';

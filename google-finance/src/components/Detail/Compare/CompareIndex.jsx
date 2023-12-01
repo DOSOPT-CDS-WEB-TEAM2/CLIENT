@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import { SearchIcon } from '../../../assets';
 import theme from '../../../styles/theme';
 import { PercentButton, PercentButtonContainer } from '../../Common/PercentButton';
 
