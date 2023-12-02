@@ -8,7 +8,7 @@
 | :-----------------------------------------------: | :---------------------------------------: | :------------------------------------------: |
 |           ![](https://github.com/nayujin-dev.png)           |         ![](https://github.com/moondda.png)         |         ![](https://github.com/imeureka.png)          |
 |             팀 리드, 초기 세팅, 메인 페이지 뷰              |           공통 버튼, 주식 상세 페이지 뷰            |     헤더 푸터, 시장 상세 현황 페이지 뷰, 네비 바      |
-
+|  ![image](https://github.com/DOSOPT-CDS-WEB-TEAM2/CLIENT/assets/91943160/b6bd0bdc-591f-42cf-b2c7-50bd73bcefa5) |  ![image](https://github.com/DOSOPT-CDS-WEB-TEAM2/CLIENT/assets/91943160/9caaa65d-1fef-4497-9063-78374c6863d2) | ![image](https://github.com/DOSOPT-CDS-WEB-TEAM2/CLIENT/assets/91943160/2faaf4a2-75a5-4e57-95cc-d48bb60c99d1) <br/> ![image](https://github.com/DOSOPT-CDS-WEB-TEAM2/CLIENT/assets/91943160/a10b8004-fbe5-4ca4-a8e6-026b3de54b60) |
 
 
 ### 🛠 Stack
